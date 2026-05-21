@@ -666,7 +666,7 @@
 <!-- NAVBAR -->
 <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
   <div class="container navbar-wrapper">
-    <a href="/" aria-current="page" class="w-nav-brand w--current" style="font-family:'Meraki',Georgia,serif;font-size:1.4rem;font-weight:400;letter-spacing:-0.03em;text-decoration:none;color:inherit;">
+    <a href="/" aria-current="page" class="w-nav-brand w--current" id="logo-home" style="font-family:'Meraki',Georgia,serif;font-size:1.4rem;font-weight:400;letter-spacing:-0.03em;text-decoration:none;color:inherit;">
       Dom.
     </a>
     <div class="nav-right">
@@ -1271,6 +1271,14 @@
         setTheme(cur === btn.dataset.themeVal ? 'light' : btn.dataset.themeVal);
       });
     });
+    var logo = document.getElementById('logo-home');
+    if (logo) {
+      logo.addEventListener('click', function(e) {
+        e.preventDefault();
+        setTheme('light');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     setTheme(stored);
   });
 })();
