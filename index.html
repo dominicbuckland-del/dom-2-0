@@ -433,7 +433,8 @@
     :root[data-theme="albers"] .section-2,
     :root[data-theme="albers"] .how-it-works,
     :root[data-theme="albers"] .faqs { border-top-color: rgba(255,244,214,0.08) !important; }
-    :root[data-theme="albers"] #grain-overlay { mix-blend-mode: screen; opacity: 0.035; }
+    /* Albers: no texture — Josef Albers was about pure flat colour, zero noise */
+    :root[data-theme="albers"] #grain-overlay { opacity: 0 !important; }
 
     /* ── Vincent — Starry Night ─────────────────────────────── */
     /* Deep Prussian blue, swirling cadmium yellow, impasto white */
@@ -455,29 +456,36 @@
     :root[data-theme="vincent"] .section-2,
     :root[data-theme="vincent"] .how-it-works,
     :root[data-theme="vincent"] .faqs { border-top-color: rgba(200,216,240,0.05) !important; }
-    :root[data-theme="vincent"] #grain-overlay { mix-blend-mode: screen; opacity: 0.02; }
+    /* Vincent: heavy impasto — canvas grain cranked up, screen blend adds luminous depth */
+    :root[data-theme="vincent"] #grain-overlay { mix-blend-mode: screen !important; opacity: 0.09 !important; }
 
-    /* ── Warhol — Factory: silkscreen flat pop ──────────────── */
-    /* Hot magenta ground, electric cyan shadow, pure white type */
+    /* ── Warhol — Marilyn series: flat gold, hot magenta accent ── */
+    /* Serigraphy: high-contrast, no gradients, halftone texture   */
     :root[data-theme="warhol"] {
-      --bg:      #E8006A;
-      --surface: #C00058;
-      --dark:    #00F0FF;
-      --accent:  #00F0FF;
-      --accent-dark: #00C8D8;
-      --text:    #FFF8F0;
-      --muted:   rgba(255,248,240,0.55);
+      --bg:      #F2C94C;
+      --surface: #E8B830;
+      --dark:    #1C0A00;
+      --accent:  #E8336A;
+      --accent-dark: #C02050;
+      --text:    #1C0A00;
+      --muted:   rgba(28,10,0,0.5);
     }
-    :root[data-theme="warhol"] .navbar { background-color: rgba(232,0,106,0.85) !important; }
-    :root[data-theme="warhol"] .button { background-color: #00F0FF !important; color: #0A0020 !important; }
+    :root[data-theme="warhol"] .navbar { background-color: rgba(242,201,76,0.88) !important; }
+    :root[data-theme="warhol"] .button { background-color: #1C0A00 !important; color: #F2C94C !important; }
     :root[data-theme="warhol"] .how-it-works-card,
-    :root[data-theme="warhol"] .privacy .how-it-works-card { border-color: rgba(255,248,240,0.1) !important; }
-    :root[data-theme="warhol"] .project-card { border-color: rgba(255,248,240,0.1) !important; }
-    :root[data-theme="warhol"] .faq-row { border-color: rgba(255,248,240,0.1) !important; }
+    :root[data-theme="warhol"] .privacy .how-it-works-card { border-color: rgba(28,10,0,0.1) !important; }
+    :root[data-theme="warhol"] .project-card { border-color: rgba(28,10,0,0.1) !important; }
+    :root[data-theme="warhol"] .faq-row { border-color: rgba(28,10,0,0.1) !important; }
     :root[data-theme="warhol"] .section-2,
     :root[data-theme="warhol"] .how-it-works,
-    :root[data-theme="warhol"] .faqs { border-top-color: rgba(255,248,240,0.06) !important; }
-    :root[data-theme="warhol"] #grain-overlay { mix-blend-mode: screen; opacity: 0.02; }
+    :root[data-theme="warhol"] .faqs { border-top-color: rgba(28,10,0,0.07) !important; }
+    /* Warhol: halftone dot grid — silkscreen registration texture */
+    :root[data-theme="warhol"] #grain-overlay {
+      background-image: radial-gradient(circle, rgba(28,10,0,0.22) 1px, transparent 1px) !important;
+      background-size: 6px 6px !important;
+      mix-blend-mode: multiply !important;
+      opacity: 0.65 !important;
+    }
 
     /* ── Artist nav strip ───────────────────────────────────── */
     .artist-nav {
@@ -488,18 +496,10 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-      padding: 7px 5%;
-      background-color: rgba(245,240,232,0.6);
-      backdrop-filter: blur(16px) saturate(160%);
-      -webkit-backdrop-filter: blur(16px) saturate(160%);
-      transition: background-color 0.4s ease;
+      padding: 6px 5%;
+      background: transparent;
+      transition: opacity 0.3s ease;
     }
-    :root[data-theme="dark"]    .artist-nav { background-color: rgba(14,15,10,0.6) !important; }
-    :root[data-theme="blue"]    .artist-nav { background-color: rgba(4,9,26,0.65) !important; }
-    :root[data-theme="red"]     .artist-nav { background-color: rgba(17,7,7,0.65) !important; }
-    :root[data-theme="albers"]  .artist-nav { background-color: rgba(232,130,10,0.65) !important; }
-    :root[data-theme="vincent"] .artist-nav { background-color: rgba(10,22,40,0.7) !important; }
-    :root[data-theme="warhol"]  .artist-nav { background-color: rgba(232,0,106,0.65) !important; }
 
     .artist-toggle {
       font-family: 'Meraki', Georgia, serif;
