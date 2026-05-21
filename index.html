@@ -655,6 +655,78 @@
       overflow: hidden;
       white-space: nowrap;
     }
+    /* ── Cookie consent ────────────────────────────────────── */
+    #cookie-banner {
+      position: fixed;
+      bottom: 32px;
+      left: 32px;
+      z-index: 10000;
+      width: 296px;
+      background: var(--bg);
+      border: 1px solid rgba(17,16,9,0.09);
+      border-radius: 20px;
+      padding: 24px 24px 20px;
+      box-shadow: 0 24px 64px rgba(17,16,9,0.13), 0 4px 14px rgba(17,16,9,0.06);
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.5s cubic-bezier(0.22,1,0.36,1), transform 0.5s cubic-bezier(0.22,1,0.36,1);
+      pointer-events: none;
+      backdrop-filter: blur(16px) saturate(160%);
+      -webkit-backdrop-filter: blur(16px) saturate(160%);
+    }
+    #cookie-banner.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    #cookie-banner.hiding {
+      opacity: 0;
+      transform: translateY(18px);
+      pointer-events: none;
+    }
+    :root[data-theme="dark"]    #cookie-banner,
+    :root[data-theme="albers"]  #cookie-banner,
+    :root[data-theme="vincent"] #cookie-banner,
+    :root[data-theme="warhol"]  #cookie-banner {
+      border-color: rgba(255,255,255,0.1);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.32), 0 4px 14px rgba(0,0,0,0.18);
+    }
+    #cookie-title {
+      font-family: 'Meraki', Georgia, serif;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin: 0 0 8px;
+    }
+    #cookie-body {
+      font-size: 0.78rem;
+      line-height: 1.55;
+      color: var(--muted);
+      margin: 0 0 20px;
+    }
+    #cookie-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    #cookie-accept {
+      font-size: 0.8rem !important;
+      padding: 8px 20px !important;
+      border-radius: 100px !important;
+    }
+    #cookie-decline {
+      font-size: 0.78rem;
+      font-family: inherit;
+      background: none;
+      border: none;
+      color: var(--muted);
+      cursor: pointer;
+      padding: 0;
+      transition: color 0.18s ease;
+    }
+    #cookie-decline:hover { color: var(--text); }
+
     .footer-wordmark sup {
       font-size: 0.4em;
       vertical-align: super;
@@ -1337,7 +1409,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// Cookie consent
+(function() {
+  if (localStorage.getItem('cookie-consent')) return;
+  var banner = document.getElementById('cookie-banner');
+  if (!banner) return;
+  function dismiss(choice) {
+    localStorage.setItem('cookie-consent', choice);
+    banner.classList.remove('visible');
+    banner.classList.add('hiding');
+    setTimeout(function() { banner.remove(); }, 600);
+  }
+  setTimeout(function() { banner.classList.add('visible'); }, 1400);
+  document.getElementById('cookie-accept').addEventListener('click', function() { dismiss('accepted'); });
+  document.getElementById('cookie-decline').addEventListener('click', function() { dismiss('declined'); });
+})();
 </script>
+
+<div id="cookie-banner">
+  <p id="cookie-title">Cookies</p>
+  <p id="cookie-body">This site stores your theme preference. That&rsquo;s honestly about it.</p>
+  <div id="cookie-actions">
+    <a class="button w-inline-block" id="cookie-accept" style="text-decoration:none;display:inline-flex;align-items:center;">
+      <div>Accept</div>
+    </a>
+    <button id="cookie-decline">Decline</button>
+  </div>
+</div>
 
 </body>
 </html>
