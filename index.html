@@ -411,6 +411,78 @@
       transform: translateY(0);
     }
 
+    /* ── Artist palettes ────────────────────────────────────── */
+
+    /* Albers — Homage to the Square: warm ochre + brick red */
+    :root[data-theme="albers"] {
+      --bg:      #F2C46A;
+      --surface: #E8A830;
+      --dark:    #2A1808;
+      --accent:  #C43018;
+      --accent-dark: #A02210;
+      --text:    #2A1808;
+      --muted:   rgba(42,24,8,0.5);
+    }
+    :root[data-theme="albers"] .navbar { background-color: rgba(242,196,106,0.78) !important; }
+    :root[data-theme="albers"] #grain-overlay { mix-blend-mode: multiply; opacity: 0.06; }
+
+    /* Leonardo — sfumato: deep umber + parchment + gold */
+    :root[data-theme="leonardo"] {
+      --bg:      #18120A;
+      --surface: #221A0E;
+      --dark:    #DDD0A8;
+      --accent:  #C8A84C;
+      --accent-dark: #A88838;
+      --text:    #DDD0A8;
+      --muted:   rgba(221,208,168,0.45);
+    }
+    :root[data-theme="leonardo"] .navbar { background-color: rgba(24,18,10,0.82) !important; }
+    :root[data-theme="leonardo"] #grain-overlay { mix-blend-mode: screen; opacity: 0.025; }
+    :root[data-theme="leonardo"] .how-it-works-card,
+    :root[data-theme="leonardo"] .privacy .how-it-works-card { border-color: rgba(221,208,168,0.08) !important; }
+    :root[data-theme="leonardo"] .project-card { border-color: rgba(221,208,168,0.08) !important; }
+    :root[data-theme="leonardo"] .faq-row { border-color: rgba(221,208,168,0.08) !important; }
+    :root[data-theme="leonardo"] .section-2,
+    :root[data-theme="leonardo"] .how-it-works,
+    :root[data-theme="leonardo"] .faqs { border-top-color: rgba(221,208,168,0.06) !important; }
+
+    /* Warhol — Pop: acid yellow + hot pink */
+    :root[data-theme="warhol"] {
+      --bg:      #F7E800;
+      --surface: #FFD000;
+      --dark:    #1C0830;
+      --accent:  #FF2D87;
+      --accent-dark: #D4006A;
+      --text:    #1C0830;
+      --muted:   rgba(28,8,48,0.5);
+    }
+    :root[data-theme="warhol"] .navbar { background-color: rgba(247,232,0,0.82) !important; }
+    :root[data-theme="warhol"] #grain-overlay { mix-blend-mode: multiply; opacity: 0.04; }
+    :root[data-theme="warhol"] .button { color: #fff !important; }
+
+    /* Artist toggle buttons */
+    .artist-toggles {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .artist-toggle {
+      font-family: 'Meraki', Georgia, serif;
+      font-size: 0.82rem;
+      background: none;
+      border: none;
+      color: var(--text);
+      opacity: 0.35;
+      cursor: pointer;
+      padding: 0;
+      letter-spacing: 0.01em;
+      transition: opacity 0.25s ease;
+    }
+    .artist-toggle:hover { opacity: 0.75; }
+    .artist-toggle.active { opacity: 1; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+    .artist-sep { color: var(--text); opacity: 0.2; font-size: 0.7rem; }
+
     /* ── Client strip separator dots ───────────────────────── */
     .privacy-hero span + span::before {
       content: '·';
@@ -578,6 +650,13 @@
           </div>
         </div>
         <p class="p-main hero-sub additional-copy">15+ years experience &middot; 30+ engagements shipped &middot; Available Q3 2026<br/></p>
+        <div class="artist-toggles">
+          <button class="artist-toggle" data-theme-val="albers">Albers</button>
+          <span class="artist-sep">&middot;</span>
+          <button class="artist-toggle" data-theme-val="leonardo">Leonardo</button>
+          <span class="artist-sep">&middot;</span>
+          <button class="artist-toggle" data-theme-val="warhol">Warhol</button>
+        </div>
       </div>
     </div>
 
@@ -599,6 +678,13 @@
         </div>
       </div>
       <p class="p-main hero-sub additional-copy">15+ years experience &middot; 30+ engagements shipped<br/></p>
+      <div class="artist-toggles">
+        <button class="artist-toggle" data-theme-val="albers">Albers</button>
+        <span class="artist-sep">&middot;</span>
+        <button class="artist-toggle" data-theme-val="leonardo">Leonardo</button>
+        <span class="artist-sep">&middot;</span>
+        <button class="artist-toggle" data-theme-val="warhol">Warhol</button>
+      </div>
     </div>
 
     <!-- Client strip -->
@@ -1089,19 +1175,35 @@
   var stored = localStorage.getItem('theme') || 'light';
   root.setAttribute('data-theme', stored);
 
+  var artistThemes = ['albers', 'leonardo', 'warhol'];
+
   function setTheme(theme) {
     root.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
     document.querySelectorAll('#theme-switcher button').forEach(function(btn) {
       btn.classList.toggle('active', btn.dataset.themeVal === theme);
     });
+    document.querySelectorAll('.artist-toggle').forEach(function(btn) {
+      btn.classList.toggle('active', btn.dataset.themeVal === theme);
+    });
   }
 
   document.addEventListener('DOMContentLoaded', function() {
     var switcher = document.getElementById('theme-switcher');
-    if (!switcher) return;
-    switcher.querySelectorAll('button').forEach(function(btn) {
-      btn.addEventListener('click', function() { setTheme(btn.dataset.themeVal); });
+    if (switcher) {
+      switcher.querySelectorAll('button').forEach(function(btn) {
+        btn.addEventListener('click', function() { setTheme(btn.dataset.themeVal); });
+      });
+    }
+    document.querySelectorAll('.artist-toggle').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var current = root.getAttribute('data-theme');
+        if (current === btn.dataset.themeVal) {
+          setTheme('light');
+        } else {
+          setTheme(btn.dataset.themeVal);
+        }
+      });
     });
     setTheme(stored);
   });
