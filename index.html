@@ -1411,7 +1411,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Cookie consent
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
   if (localStorage.getItem('cookie-consent')) return;
   var banner = document.getElementById('cookie-banner');
   if (!banner) return;
@@ -1424,7 +1424,7 @@ document.addEventListener('DOMContentLoaded', function() {
   setTimeout(function() { banner.classList.add('visible'); }, 1400);
   document.getElementById('cookie-accept').addEventListener('click', function() { dismiss('accepted'); });
   document.getElementById('cookie-decline').addEventListener('click', function() { dismiss('declined'); });
-})();
+});
 </script>
 
 <div id="cookie-banner">
