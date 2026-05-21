@@ -413,75 +413,109 @@
 
     /* ── Artist palettes ────────────────────────────────────── */
 
-    /* Albers — Homage to the Square: warm ochre + brick red */
+    /* ── Albers — Homage to the Square ─────────────────────── */
+    /* Concentric warmth: saturated orange field, cadmium red accent */
     :root[data-theme="albers"] {
-      --bg:      #F2C46A;
-      --surface: #E8A830;
-      --dark:    #2A1808;
-      --accent:  #C43018;
-      --accent-dark: #A02210;
-      --text:    #2A1808;
-      --muted:   rgba(42,24,8,0.5);
+      --bg:      #E8820A;
+      --surface: #C45E08;
+      --dark:    #FFF4D6;
+      --accent:  #FFF4D6;
+      --accent-dark: #F0E0A0;
+      --text:    #FFF4D6;
+      --muted:   rgba(255,244,214,0.55);
     }
-    :root[data-theme="albers"] .navbar { background-color: rgba(242,196,106,0.78) !important; }
-    :root[data-theme="albers"] #grain-overlay { mix-blend-mode: multiply; opacity: 0.06; }
+    :root[data-theme="albers"] .navbar { background-color: rgba(232,130,10,0.82) !important; }
+    :root[data-theme="albers"] .button { background-color: #2A1000 !important; color: #FFF4D6 !important; }
+    :root[data-theme="albers"] .how-it-works-card,
+    :root[data-theme="albers"] .privacy .how-it-works-card { border-color: rgba(255,244,214,0.12) !important; }
+    :root[data-theme="albers"] .project-card { border-color: rgba(255,244,214,0.12) !important; }
+    :root[data-theme="albers"] .faq-row { border-color: rgba(255,244,214,0.1) !important; }
+    :root[data-theme="albers"] .section-2,
+    :root[data-theme="albers"] .how-it-works,
+    :root[data-theme="albers"] .faqs { border-top-color: rgba(255,244,214,0.08) !important; }
+    :root[data-theme="albers"] #grain-overlay { mix-blend-mode: screen; opacity: 0.035; }
 
-    /* Leonardo — sfumato: deep umber + parchment + gold */
-    :root[data-theme="leonardo"] {
-      --bg:      #18120A;
-      --surface: #221A0E;
-      --dark:    #DDD0A8;
-      --accent:  #C8A84C;
-      --accent-dark: #A88838;
-      --text:    #DDD0A8;
-      --muted:   rgba(221,208,168,0.45);
+    /* ── Vincent — Starry Night ─────────────────────────────── */
+    /* Deep Prussian blue, swirling cadmium yellow, impasto white */
+    :root[data-theme="vincent"] {
+      --bg:      #0A1628;
+      --surface: #0F1E38;
+      --dark:    #F5E660;
+      --accent:  #F5E660;
+      --accent-dark: #D4C230;
+      --text:    #C8D8F0;
+      --muted:   rgba(200,216,240,0.45);
     }
-    :root[data-theme="leonardo"] .navbar { background-color: rgba(24,18,10,0.82) !important; }
-    :root[data-theme="leonardo"] #grain-overlay { mix-blend-mode: screen; opacity: 0.025; }
-    :root[data-theme="leonardo"] .how-it-works-card,
-    :root[data-theme="leonardo"] .privacy .how-it-works-card { border-color: rgba(221,208,168,0.08) !important; }
-    :root[data-theme="leonardo"] .project-card { border-color: rgba(221,208,168,0.08) !important; }
-    :root[data-theme="leonardo"] .faq-row { border-color: rgba(221,208,168,0.08) !important; }
-    :root[data-theme="leonardo"] .section-2,
-    :root[data-theme="leonardo"] .how-it-works,
-    :root[data-theme="leonardo"] .faqs { border-top-color: rgba(221,208,168,0.06) !important; }
+    :root[data-theme="vincent"] .navbar { background-color: rgba(10,22,40,0.85) !important; }
+    :root[data-theme="vincent"] .button { background-color: #F5E660 !important; color: #0A1628 !important; }
+    :root[data-theme="vincent"] .how-it-works-card,
+    :root[data-theme="vincent"] .privacy .how-it-works-card { border-color: rgba(200,216,240,0.08) !important; }
+    :root[data-theme="vincent"] .project-card { border-color: rgba(200,216,240,0.08) !important; }
+    :root[data-theme="vincent"] .faq-row { border-color: rgba(200,216,240,0.08) !important; }
+    :root[data-theme="vincent"] .section-2,
+    :root[data-theme="vincent"] .how-it-works,
+    :root[data-theme="vincent"] .faqs { border-top-color: rgba(200,216,240,0.05) !important; }
+    :root[data-theme="vincent"] #grain-overlay { mix-blend-mode: screen; opacity: 0.02; }
 
-    /* Warhol — Pop: acid yellow + hot pink */
+    /* ── Warhol — Factory: silkscreen flat pop ──────────────── */
+    /* Hot magenta ground, electric cyan shadow, pure white type */
     :root[data-theme="warhol"] {
-      --bg:      #F7E800;
-      --surface: #FFD000;
-      --dark:    #1C0830;
-      --accent:  #FF2D87;
-      --accent-dark: #D4006A;
-      --text:    #1C0830;
-      --muted:   rgba(28,8,48,0.5);
+      --bg:      #E8006A;
+      --surface: #C00058;
+      --dark:    #00F0FF;
+      --accent:  #00F0FF;
+      --accent-dark: #00C8D8;
+      --text:    #FFF8F0;
+      --muted:   rgba(255,248,240,0.55);
     }
-    :root[data-theme="warhol"] .navbar { background-color: rgba(247,232,0,0.82) !important; }
-    :root[data-theme="warhol"] #grain-overlay { mix-blend-mode: multiply; opacity: 0.04; }
-    :root[data-theme="warhol"] .button { color: #fff !important; }
+    :root[data-theme="warhol"] .navbar { background-color: rgba(232,0,106,0.85) !important; }
+    :root[data-theme="warhol"] .button { background-color: #00F0FF !important; color: #0A0020 !important; }
+    :root[data-theme="warhol"] .how-it-works-card,
+    :root[data-theme="warhol"] .privacy .how-it-works-card { border-color: rgba(255,248,240,0.1) !important; }
+    :root[data-theme="warhol"] .project-card { border-color: rgba(255,248,240,0.1) !important; }
+    :root[data-theme="warhol"] .faq-row { border-color: rgba(255,248,240,0.1) !important; }
+    :root[data-theme="warhol"] .section-2,
+    :root[data-theme="warhol"] .how-it-works,
+    :root[data-theme="warhol"] .faqs { border-top-color: rgba(255,248,240,0.06) !important; }
+    :root[data-theme="warhol"] #grain-overlay { mix-blend-mode: screen; opacity: 0.02; }
 
-    /* Artist toggle buttons */
-    .artist-toggles {
+    /* ── Artist nav strip ───────────────────────────────────── */
+    .artist-nav {
+      position: sticky;
+      top: 52px;
+      z-index: 99;
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-top: 20px;
+      justify-content: center;
+      gap: 12px;
+      padding: 7px 5%;
+      background-color: rgba(245,240,232,0.6);
+      backdrop-filter: blur(16px) saturate(160%);
+      -webkit-backdrop-filter: blur(16px) saturate(160%);
+      transition: background-color 0.4s ease;
     }
+    :root[data-theme="dark"]    .artist-nav { background-color: rgba(14,15,10,0.6) !important; }
+    :root[data-theme="blue"]    .artist-nav { background-color: rgba(4,9,26,0.65) !important; }
+    :root[data-theme="red"]     .artist-nav { background-color: rgba(17,7,7,0.65) !important; }
+    :root[data-theme="albers"]  .artist-nav { background-color: rgba(232,130,10,0.65) !important; }
+    :root[data-theme="vincent"] .artist-nav { background-color: rgba(10,22,40,0.7) !important; }
+    :root[data-theme="warhol"]  .artist-nav { background-color: rgba(232,0,106,0.65) !important; }
+
     .artist-toggle {
       font-family: 'Meraki', Georgia, serif;
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       background: none;
       border: none;
       color: var(--text);
-      opacity: 0.35;
+      opacity: 0.4;
       cursor: pointer;
       padding: 0;
-      letter-spacing: 0.01em;
-      transition: opacity 0.25s ease;
+      letter-spacing: 0.02em;
+      transition: opacity 0.22s ease;
     }
-    .artist-toggle:hover { opacity: 0.75; }
-    .artist-toggle.active { opacity: 1; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
-    .artist-sep { color: var(--text); opacity: 0.2; font-size: 0.7rem; }
+    .artist-toggle:hover { opacity: 0.85; }
+    .artist-toggle.active { opacity: 1; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    .artist-sep { color: var(--text); opacity: 0.2; font-size: 0.65rem; }
 
     /* ── Client strip separator dots ───────────────────────── */
     .privacy-hero span + span::before {
@@ -627,6 +661,15 @@
   </div>
 </div>
 
+<!-- ARTIST PALETTE STRIP -->
+<div class="artist-nav">
+  <button class="artist-toggle" data-theme-val="albers">Albers</button>
+  <span class="artist-sep">&middot;</span>
+  <button class="artist-toggle" data-theme-val="vincent">Vincent</button>
+  <span class="artist-sep">&middot;</span>
+  <button class="artist-toggle" data-theme-val="warhol">Warhol</button>
+</div>
+
 <div class="overlay"></div>
 
 <!-- HERO -->
@@ -650,13 +693,6 @@
           </div>
         </div>
         <p class="p-main hero-sub additional-copy">15+ years experience &middot; 30+ engagements shipped &middot; Available Q3 2026<br/></p>
-        <div class="artist-toggles">
-          <button class="artist-toggle" data-theme-val="albers">Albers</button>
-          <span class="artist-sep">&middot;</span>
-          <button class="artist-toggle" data-theme-val="leonardo">Leonardo</button>
-          <span class="artist-sep">&middot;</span>
-          <button class="artist-toggle" data-theme-val="warhol">Warhol</button>
-        </div>
       </div>
     </div>
 
@@ -678,13 +714,6 @@
         </div>
       </div>
       <p class="p-main hero-sub additional-copy">15+ years experience &middot; 30+ engagements shipped<br/></p>
-      <div class="artist-toggles">
-        <button class="artist-toggle" data-theme-val="albers">Albers</button>
-        <span class="artist-sep">&middot;</span>
-        <button class="artist-toggle" data-theme-val="leonardo">Leonardo</button>
-        <span class="artist-sep">&middot;</span>
-        <button class="artist-toggle" data-theme-val="warhol">Warhol</button>
-      </div>
     </div>
 
     <!-- Client strip -->
