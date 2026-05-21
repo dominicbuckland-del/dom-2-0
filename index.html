@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <link href="https://cdn.prod.website-files.com" rel="preconnect" crossorigin="anonymous"/>
+  <title>Dom Buckland — AI-native Studio</title>
+  <meta content="One-man AI-native studio. Marketing systems, custom software, and brand work for operators ready to move. Based in Brisbane, AU." name="description"/>
+  <meta content="Dom Buckland — AI-native Studio" property="og:title"/>
+  <meta content="One-man AI-native studio. Marketing systems, custom software, and brand work for operators ready to move." property="og:description"/>
+  <meta content="Home | Dom Buckland" name="twitter:title"/>
+  <meta content="One-man AI-native studio. Marketing systems, custom software, and brand work for operators ready to move." name="twitter:description"/>
+  <meta property="og:type" content="website"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="https://cdn.prod.website-files.com/694043d273dceabab479f631/css/littlebird-2b10c6.webflow.shared.c90487c59.min.css" rel="stylesheet" type="text/css" crossorigin="anonymous"/>
+  <link href="https://cdn.prod.website-files.com/694043d273dceabab479f631/696168745651934580c36c0d_Littlebird%20Logo%20(Transparent%20Black).png" rel="icon" type="image/png" sizes="32x32" media="(prefers-color-scheme: light)"/>
+  <link href="https://cdn.prod.website-files.com/694043d273dceabab479f631/69cad45f89767e1f13410666_Littlebird%20Logo%20(Transparent%20White).png" rel="icon" type="image/png" sizes="32x32" media="(prefers-color-scheme: dark)"/>
+  <link href="https://cdn.prod.website-files.com/694043d273dceabab479f631/69603245cff328dc64a18f61_Base%20Icon%20%5BDO%20NOT%20EDIT%5D%206.png" rel="apple-touch-icon"/>
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <script type="text/javascript">(function(e){var s={r:[]};e.wf={r:s.r,ready:t=>{s.r.push(t)}}})(window)</script>
+  <style>
+    @font-face { font-family: 'Meraki'; src: url('Meraki-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Meraki'; src: url('Meraki-Book.woff2') format('woff2'); font-weight: 450; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Meraki'; src: url('Meraki-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Meraki'; src: url('Meraki-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Meraki'; src: url('Meraki-Heavy.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+    :root {
+      --bg:      #F5F0E8;
+      --surface: #EDE7DC;
+      --dark:    #111009;
+      --accent:  #C4622D;
+      --accent-dark: #A0501F;
+      --text:    #111009;
+      --muted:   rgba(17,16,9,0.45);
+    }
+    :root[data-theme="dark"] {
+      --bg:      #0E0F0A;
+      --surface: #16170F;
+      --dark:    #F5F0E8;
+      --accent:  #C4622D;
+      --accent-dark: #A0501F;
+      --text:    #F0EBE1;
+      --muted:   rgba(240,235,225,0.45);
+    }
+    /* Blue palette */
+    :root[data-theme="blue"] {
+      --bg:      #04091A;
+      --surface: #080F24;
+      --dark:    #E8EEFF;
+      --accent:  #3B7EFF;
+      --accent-dark: #2560E0;
+      --text:    #E8EEFF;
+      --muted:   rgba(232,238,255,0.45);
+    }
+    /* Red palette */
+    :root[data-theme="red"] {
+      --bg:      #110707;
+      --surface: #1A0C0C;
+      --dark:    #F5EDEC;
+      --accent:  #C23B3B;
+      --accent-dark: #A02E2E;
+      --text:    #F5EDEC;
+      --muted:   rgba(245,237,236,0.45);
+    }
+
+    /* Dark-theme shared overrides (all non-light themes) */
+    :root[data-theme="dark"] .section-2,
+    :root[data-theme="blue"] .section-2,
+    :root[data-theme="red"]  .section-2,
+    :root[data-theme="dark"] .how-it-works,
+    :root[data-theme="blue"] .how-it-works,
+    :root[data-theme="red"]  .how-it-works,
+    :root[data-theme="dark"] .faqs,
+    :root[data-theme="blue"] .faqs,
+    :root[data-theme="red"]  .faqs { border-top-color: rgba(255,255,255,0.05) !important; }
+
+    :root[data-theme="dark"] .how-it-works-card,
+    :root[data-theme="blue"] .how-it-works-card,
+    :root[data-theme="red"]  .how-it-works-card,
+    :root[data-theme="dark"] .privacy .how-it-works-card,
+    :root[data-theme="blue"] .privacy .how-it-works-card,
+    :root[data-theme="red"]  .privacy .how-it-works-card { border-color: rgba(255,255,255,0.06) !important; }
+
+    :root[data-theme="dark"] .project-card,
+    :root[data-theme="blue"] .project-card,
+    :root[data-theme="red"]  .project-card { border-color: rgba(255,255,255,0.07) !important; }
+
+    :root[data-theme="dark"] .faq-row,
+    :root[data-theme="blue"] .faq-row,
+    :root[data-theme="red"]  .faq-row { border-color: rgba(255,255,255,0.08) !important; }
+
+    :root[data-theme="dark"] #grain-overlay,
+    :root[data-theme="blue"] #grain-overlay,
+    :root[data-theme="red"]  #grain-overlay { mix-blend-mode: screen; opacity: 0.025; }
+
+
+    :root[data-theme="blue"] .navbar { background-color: rgba(4,9,26,0.75) !important; }
+    :root[data-theme="red"]  .navbar { background-color: rgba(17,7,7,0.78) !important; }
+
+    /* 4-quadrant theme switcher */
+    #theme-switcher {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      width: 28px;
+      height: 28px;
+      border-radius: 5px;
+      overflow: hidden;
+      border: 1.5px solid rgba(17,16,9,0.14);
+      gap: 1.5px;
+      background: rgba(17,16,9,0.1);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    :root[data-theme="dark"] #theme-switcher,
+    :root[data-theme="blue"] #theme-switcher,
+    :root[data-theme="red"]  #theme-switcher {
+      border-color: rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.08);
+    }
+    #theme-switcher button {
+      border: none;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      opacity: 0.45;
+      transition: opacity 0.2s, box-shadow 0.2s;
+    }
+    #theme-switcher button:hover { opacity: 0.8; }
+    #theme-switcher button.active { opacity: 1; box-shadow: inset 0 0 0 2px rgba(255,255,255,0.55); }
+    #theme-switcher button[data-theme-val="light"].active { box-shadow: inset 0 0 0 2px rgba(17,16,9,0.3); }
+    #theme-switcher button[data-theme-val="light"] { background: #F5F0E8; }
+    #theme-switcher button[data-theme-val="dark"]  { background: #0E0F0A; }
+    #theme-switcher button[data-theme-val="red"]   { background: #C23B3B; }
+    #theme-switcher button[data-theme-val="blue"]  { background: #3B7EFF; }
+
+    h1, h2, h3, h4, h5, h6,
+    .hero-left, .features_header, .how-littlebird-works-header,
+    .heading-style-h3, .heading-style-h6, .privacy-header,
+    .faq__title {
+      font-family: 'Meraki', Georgia, serif;
+    }
+
+    /* Base */
+    html, body { background-color: var(--bg) !important; color: var(--text) !important; }
+
+    /* Navbar — glass */
+    .navbar {
+      background-color: rgba(245, 240, 232, 0.72) !important;
+      backdrop-filter: blur(24px) saturate(180%) !important;
+      -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+      border-bottom: none !important;
+      padding-top: 12px !important;
+      padding-bottom: 12px !important;
+      transition: background-color 0.4s ease !important;
+    }
+    :root[data-theme="dark"] .navbar {
+      background-color: rgba(14, 15, 10, 0.75) !important;
+      border-bottom-color: rgba(240,235,225,0.06) !important;
+    }
+    .navbar-wrapper {
+      align-items: center !important;
+    }
+    .nav-link {
+      color: var(--text) !important;
+      font-size: 0.85rem !important;
+      letter-spacing: 0.02em !important;
+      padding: 10px 14px !important;
+      opacity: 0.7;
+      transition: opacity 0.2s !important;
+    }
+    .nav-link:hover { opacity: 1 !important; }
+    .nav-menu { min-width: unset !important; }
+    .w-nav-brand {
+      color: var(--text) !important;
+      font-size: 0.95rem !important;
+      letter-spacing: -0.03em !important;
+    }
+    /* Nav CTA button — smaller, pill */
+    .nav-btn {
+      font-size: 0.82rem !important;
+      padding: 8px 18px !important;
+      border-radius: 100px !important;
+    }
+
+    /* Buttons */
+    .button {
+      background-image: none !important;
+      background-color: var(--dark) !important;
+      color: var(--bg) !important;
+      transition: background-color 0.2s;
+    }
+    .button:hover { background-color: #2a2a20 !important; }
+
+    /* Outline button variant */
+    a.button[style*="background:transparent"],
+    a.button[style*="background-color:transparent"] {
+      background-color: transparent !important;
+      color: var(--text) !important;
+      border-color: rgba(17,16,9,0.25) !important;
+    }
+
+    /* Text links */
+    .text-link { color: var(--accent) !important; }
+
+    /* Hero */
+    .hero { background-color: var(--bg) !important; }
+    .hero-left, .hero h1 { color: var(--text) !important; }
+    .p-main.hero-sub { color: var(--text) !important; }
+    .p-main.hero-sub.additional-copy { color: var(--muted) !important; }
+
+    /* Client strip */
+    .privacy-hero span { color: var(--text) !important; }
+
+    /* Solutions grid */
+    .solutions { background-color: var(--bg) !important; }
+    .features_header { color: var(--text) !important; }
+    .p-main.sub-head { color: var(--muted) !important; }
+
+    /* Project cards */
+    [style*="background:rgba(255,255,255,0.04)"],
+    [style*="background-color:rgba(255,255,255,0.04)"] {
+      background: var(--surface) !important;
+    }
+    [style*="border:1px solid rgba(255,255,255,0.15)"] {
+      border-color: rgba(196,98,45,0.4) !important;
+      color: var(--accent) !important;
+      opacity: 1 !important;
+    }
+    [style*="opacity:0.6"] { opacity: 1 !important; color: var(--muted) !important; }
+
+    /* How it works */
+    .how-it-works { background-color: var(--surface) !important; }
+    .how-it-works-card { background-color: var(--bg) !important; border: 1px solid rgba(17,16,9,0.08); }
+    .how-it-works h2, .how-it-works h6 { color: var(--text) !important; }
+    .how-it-works .p-main { color: var(--muted) !important; }
+    .div-block-79 { color: var(--accent) !important; opacity: 0.35 !important; }
+
+    /* Services */
+    .padding-global { background-color: var(--bg) !important; }
+    .heading-style-h3 { color: var(--text) !important; }
+    .heading-style-h6 { color: var(--text) !important; }
+    .services_desc { color: var(--muted) !important; }
+    .services_item { border-top-color: rgba(17,16,9,0.1) !important; }
+
+    /* Testimonials */
+    .section-2 { background-color: var(--surface) !important; }
+    .section-2 h2 { color: var(--text) !important; }
+
+    /* About */
+    .privacy { background-color: var(--bg) !important; }
+    .privacy-header { color: var(--text) !important; }
+    .privacy .p-main { color: var(--muted) !important; }
+    .privacy .how-it-works-card { background-color: var(--surface) !important; border: 1px solid rgba(17,16,9,0.08); }
+    .privacy h6 { color: var(--text) !important; }
+    .text-opaque { color: var(--muted) !important; }
+
+    /* FAQs */
+    .faqs { background-color: var(--surface) !important; }
+    .faqs h2 { color: var(--text) !important; }
+    .faq-row { border-color: rgba(17,16,9,0.1) !important; }
+    .faq__title { color: var(--text) !important; }
+    .faq-answer { color: var(--muted) !important; }
+
+    /* CTA — keep dark for contrast */
+    .cta { background-color: var(--dark) !important; }
+    .cta-block { background-color: var(--dark) !important; }
+    .cta h2 { color: var(--bg) !important; }
+    .cta .p-main { color: rgba(245,240,232,0.7) !important; }
+    .cta .button {
+      background-color: var(--accent) !important;
+      color: #fff !important;
+    }
+    .cta .button:hover { background-color: var(--accent-dark) !important; }
+
+    /* Footer */
+    .footer { background-color: var(--dark) !important; color: var(--bg) !important; }
+    .footer-col-title { color: rgba(245,240,232,0.45) !important; }
+    .footer-link { color: var(--bg) !important; }
+    .footer-legal { color: rgba(245,240,232,0.4) !important; }
+    .flex-block-8 span { color: rgba(245,240,232,0.4) !important; }
+
+    /* Stats strip (about section) */
+    .w-layout-hflex.flex-block-8 span { color: var(--muted) !important; }
+
+    /* ── Project cards ─────────────────────────────────────── */
+    .project-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .project-card {
+      background: var(--surface);
+      border: 1px solid rgba(17,16,9,0.07);
+      border-radius: 16px;
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.28s ease, border-color 0.28s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 48px rgba(17,16,9,0.07);
+      border-color: rgba(196,98,45,0.22);
+    }
+    .project-tags { display: flex; gap: 7px; flex-wrap: wrap; }
+    .project-tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      border: 1px solid rgba(196,98,45,0.35);
+      color: var(--accent);
+      padding: 4px 11px;
+      border-radius: 100px;
+      line-height: 1.4;
+    }
+    .project-card-title {
+      font-family: 'Meraki', Georgia, serif;
+      font-size: 1.35rem;
+      line-height: 1.1;
+      margin: 0;
+      color: var(--text);
+    }
+    .project-card-body {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.55;
+      margin: 0;
+      flex: 1;
+    }
+    .project-card-link {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 4px;
+      transition: gap 0.2s ease;
+    }
+    .project-card-link:hover { gap: 8px; }
+    .project-card-arrow { display: inline-block; transition: transform 0.2s ease; }
+    .project-card-link:hover .project-card-arrow { transform: translateX(3px); }
+
+    /* ── Button micro-interaction ───────────────────────────── */
+    .button {
+      transition: background-color 0.2s, transform 0.15s cubic-bezier(0.34,1.56,0.64,1) !important;
+    }
+    .button:hover { transform: translateY(-2px) !important; }
+    .button:active { transform: translateY(0) !important; }
+
+    /* ── Nav link hover underline ───────────────────────────── */
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 8px; left: 10px; right: 10px;
+      height: 1px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.22s ease;
+    }
+    .nav-link:hover::after { transform: scaleX(1); }
+
+    /* ── Feature tile hover ─────────────────────────────────── */
+    .feature-tile {
+      transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1) !important;
+      overflow: hidden;
+    }
+    .feature-tile:hover { transform: scale(1.015) !important; }
+
+    /* ── Service item arrow hover ───────────────────────────── */
+    .link-block-5 { transition: transform 0.2s ease; }
+    .pricing-link-div:hover .link-block-5 { transform: translateX(5px); }
+
+    /* ── FAQ row hover ──────────────────────────────────────── */
+    .faq-row { transition: background-color 0.18s ease; border-radius: 8px; padding: 0 8px; margin: 0 -8px; }
+    .faq-row:hover { background-color: rgba(196,98,45,0.04) !important; }
+
+    /* ── How-it-works number accent ────────────────────────── */
+    .div-block-79 {
+      font-family: 'Meraki', Georgia, serif !important;
+      font-size: 4rem !important;
+      letter-spacing: -0.04em !important;
+      opacity: 0.12 !important;
+      color: var(--accent) !important;
+    }
+
+    /* ── How-it-works card hover ────────────────────────────── */
+    .how-it-works-card {
+      transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.28s ease;
+    }
+    .how-it-works-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(17,16,9,0.06);
+    }
+
+    /* ── Scroll reveal ──────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.22,1,0.36,1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Client strip separator dots ───────────────────────── */
+    .privacy-hero span + span::before {
+      content: '·';
+      margin-right: 20px;
+      opacity: 0.3;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       WORLD-CLASS PREMIUM PASS
+    ═══════════════════════════════════════════════════════ */
+
+    /* Grain overlay — applied via JS canvas (see bottom of file) */
+    #grain-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9998;
+      pointer-events: none;
+      opacity: 0.055;
+      mix-blend-mode: multiply;
+      background-repeat: repeat;
+      background-size: 256px 256px;
+    }
+
+    /* Hero — command the viewport */
+    .hero-left {
+      font-size: clamp(72px, 9vw, 128px) !important;
+      line-height: 0.93 !important;
+      letter-spacing: -0.03em !important;
+      margin-bottom: 40px !important;
+    }
+    .hero { padding-top: 100px !important; padding-bottom: 100px !important; }
+    .hero-top { gap: 40px !important; margin-bottom: 60px !important; }
+
+    /* Radical section spacing */
+    .solutions { padding-top: 120px !important; padding-bottom: 120px !important; }
+    .how-it-works { padding-top: 120px !important; padding-bottom: 120px !important; }
+    .padding-global { padding-top: 120px !important; padding-bottom: 120px !important; }
+    .section-2 { padding-top: 120px !important; padding-bottom: 120px !important; }
+    .privacy { padding-top: 120px !important; padding-bottom: 120px !important; }
+    .faqs { padding-top: 120px !important; padding-bottom: 120px !important; }
+    .cta { padding-top: 120px !important; padding-bottom: 120px !important; }
+
+    /* Accent restraint — remove terracotta except buttons */
+    .project-tag {
+      border-color: rgba(17,16,9,0.12) !important;
+      color: var(--muted) !important;
+    }
+    .nav-link::after { background: var(--text) !important; opacity: 0.4; }
+    .div-block-79 { color: var(--text) !important; opacity: 0.07 !important; }
+    .text-link { color: var(--text) !important; text-decoration: underline; text-underline-offset: 3px; }
+    .project-card-link { color: var(--text) !important; }
+    .project-card:hover { border-color: rgba(17,16,9,0.14) !important; }
+
+    /* Motion — slow, deliberate, no bounce */
+    * { transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important; }
+    .button { transition: background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important; }
+    .button:hover { transform: translateY(-2px) !important; }
+    .project-card { transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important; }
+    .how-it-works-card { transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important; }
+    .reveal { transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) !important; }
+    .nav-link::after { transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important; }
+
+    /* Pull quote */
+    .pull-quote {
+      margin: 0 auto;
+      max-width: 780px;
+      text-align: center;
+      padding: 0;
+      border: none;
+    }
+    .pull-quote-text {
+      font-family: 'Meraki', Georgia, serif;
+      font-size: clamp(1.5rem, 3vw, 2.4rem);
+      line-height: 1.25;
+      color: var(--text);
+      margin: 0 0 28px;
+      letter-spacing: -0.01em;
+    }
+    .pull-quote-cite {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-style: normal;
+    }
+
+    /* Footer wordmark — full width, editorial stamp */
+    .footer-wordmark {
+      font-family: 'Meraki', Georgia, serif;
+      font-size: clamp(60px, 10vw, 140px);
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: var(--bg);
+      opacity: 0.18;
+      text-align: center;
+      padding: 80px 5% 60px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .footer-wordmark sup {
+      font-size: 0.4em;
+      vertical-align: super;
+    }
+
+    /* Section divider rule */
+    .solutions, .how-it-works, .padding-global, .section-2, .privacy, .faqs {
+      border-top: 1px solid rgba(17,16,9,0.06);
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
+  <div class="container navbar-wrapper">
+    <a href="/" aria-current="page" class="w-nav-brand w--current" style="font-family:'Meraki',Georgia,serif;font-size:1.4rem;font-weight:400;letter-spacing:-0.03em;text-decoration:none;color:inherit;">
+      Dom.
+    </a>
+    <div class="nav-right">
+      <nav role="navigation" class="nav-menu w-nav-menu">
+        <a href="#work" class="nav-link w-nav-link">Work</a>
+        <a href="#about" class="nav-link w-nav-link">About</a>
+        <a href="#contact" class="nav-link w-nav-link">Contact</a>
+      </nav>
+
+      <div class="div-block-5">
+        <div id="theme-switcher" role="group" aria-label="Switch colour palette">
+          <button data-theme-val="light"  aria-label="Light"></button>
+          <button data-theme-val="dark"   aria-label="Dark"></button>
+          <button data-theme-val="red"    aria-label="Red"></button>
+          <button data-theme-val="blue"   aria-label="Blue"></button>
+        </div>
+        <div class="div-block-31 cta-mac" style="display:flex;">
+          <a href="#contact" class="button m-t-0 nav-btn w-inline-block">
+            <div>Let&rsquo;s talk</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="menu-button w-nav-button"><div class="w-icon-nav-menu"></div></div>
+  </div>
+</div>
+
+<div class="overlay"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="container">
+
+    <!-- Desktop hero -->
+    <div class="hero-top desktop">
+      <h1 class="hero-left">Built, to Create.<br/></h1>
+      <div class="hero-top-right">
+        <p id="hero-subheadline" class="p-main hero-sub">I build integrated marketing and operations systems so we can get to the fun stuff faster.<br/></p>
+        <div class="ctas">
+          <div class="div-block-43">
+            <div class="div-block-31 cta-mac" style="display:flex;">
+              <div class="div-block-76">
+                <a href="#contact" class="button w-inline-block">
+                  <div class="text-block-22">Let&rsquo;s talk</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="p-main hero-sub additional-copy">15+ years experience &middot; 30+ engagements shipped &middot; Available Q3 2026<br/></p>
+      </div>
+    </div>
+
+    <!-- Mobile hero -->
+    <div class="hero-top mobile">
+      <h1 class="hero-left">Built, to Create.<br/></h1>
+      <div class="hero-top-right">
+        <p id="hero-subheadline" class="p-main hero-sub">I build integrated marketing and operations systems so we can get to the fun stuff faster.<br/></p>
+        <div class="ctas">
+          <div class="div-block-43">
+            <div class="div-block-31 cta-mac" style="display:flex;">
+              <div class="div-block-76">
+                <a href="#contact" class="button w-inline-block">
+                  <div class="text-block-22">Let&rsquo;s talk</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="p-main hero-sub additional-copy">15+ years experience &middot; 30+ engagements shipped<br/></p>
+    </div>
+
+    <!-- Client strip -->
+    <div class="w-layout-hflex privacy-hero" style="flex-wrap:wrap;gap:8px 20px;opacity:0.5;font-size:0.8rem;letter-spacing:0.06em;text-transform:uppercase;font-weight:500;">
+      <span>Rowell Logistics</span>
+      <span>PreQual</span>
+      <span>Great Barrier Reef Foundation</span>
+      <span>Nesta Builder Brokers</span>
+      <span>LifeFlight Queensland</span>
+      <span>ButcherCrowd</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- FEATURES GRID -->
+<div id="work" class="solutions">
+  <div class="container">
+    <div class="features-top">
+      <p style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.5;font-weight:500;margin-bottom:12px;">/ Selected Work (01)</p>
+      <h2 class="m-b-24 features_header">A decade of shipping.<br/>Not slides.</h2>
+      <p class="p-main sub-head">Custom operating systems, brand builds, digital marketing, and automation. Everything shipped — nothing pitched.</p>
+    </div>
+    <div class="div-block-6">
+
+      <!-- Tile 1 -->
+      <div id="w-node-_69723373-5af1-c412-a32d-d9dd9bb76c57-b479f688" class="feature-tile">
+        <div class="feature-card-text-wrapper">
+          <h3 class="m-b-24 _2 left">Marketing systems that compound</h3>
+          <p class="p-main white full-opacity">Not campaigns. Systems. Built to generate leads, build authority, and run without constant input.</p>
+        </div>
+        <div data-poster-url="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F694049bade8429b8b683468f_kling_20251210_Image_to_Video_trees_and__1317_0_poster.0000000.jpg" data-video-urls="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F694049bade8429b8b683468f_kling_20251210_Image_to_Video_trees_and__1317_0_mp4.mp4,https://cdn.prod.website-files.com/694043d273dceabab479f631%2F694049bade8429b8b683468f_kling_20251210_Image_to_Video_trees_and__1317_0_webm.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="background-video w-background-video w-background-video-atom">
+          <video autoplay loop style="background-image:url('https://cdn.prod.website-files.com/694043d273dceabab479f631%2F694049bade8429b8b683468f_kling_20251210_Image_to_Video_trees_and__1317_0_poster.0000000.jpg')" muted playsinline data-wf-ignore="true" data-object-fit="cover">
+            <source src="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F694049bade8429b8b683468f_kling_20251210_Image_to_Video_trees_and__1317_0_mp4.mp4" data-wf-ignore="true"/>
+            <source src="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F694049bade8429b8b683468f_kling_20251210_Image_to_Video_trees_and__1317_0_webm.webm" data-wf-ignore="true"/>
+          </video>
+        </div>
+        <img src="https://cdn.prod.website-files.com/694043d273dceabab479f631/69404be7ca07a483e08436d7_b15bb76641db2755099bc43c6fd532f3_4.avif" loading="lazy" alt="" class="feature-gradient"/>
+      </div>
+
+      <!-- Tile 2 -->
+      <div class="feature-tile">
+        <div class="feature-card-text-wrapper">
+          <h3 class="m-b-24 _2 left">Custom software, shipped</h3>
+          <p class="p-main white full-opacity">Bespoke tools and SaaS products built fast. No agency overhead, no six-week discovery phase. Scope agreed, then shipped.</p>
+        </div>
+        <img src="https://cdn.prod.website-files.com/694043d273dceabab479f631/69404be76250e5d036b4b43b_d00793a6e99a202c47bd290589cb86b7_3Ellipse%205.avif" loading="lazy" alt="" class="feature-gradient green"/>
+        <div data-poster-url="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69404a112af576f8b2c7d26b_kling_20251210_Image_to_Video_leaves_blo_1320_0_poster.0000000.jpg" data-video-urls="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69404a112af576f8b2c7d26b_kling_20251210_Image_to_Video_leaves_blo_1320_0_mp4.mp4,https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69404a112af576f8b2c7d26b_kling_20251210_Image_to_Video_leaves_blo_1320_0_webm.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="background-video w-background-video w-background-video-atom">
+          <video autoplay loop style="background-image:url('https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69404a112af576f8b2c7d26b_kling_20251210_Image_to_Video_leaves_blo_1320_0_poster.0000000.jpg')" muted playsinline data-wf-ignore="true" data-object-fit="cover">
+            <source src="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69404a112af576f8b2c7d26b_kling_20251210_Image_to_Video_leaves_blo_1320_0_mp4.mp4" data-wf-ignore="true"/>
+            <source src="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69404a112af576f8b2c7d26b_kling_20251210_Image_to_Video_leaves_blo_1320_0_webm.webm" data-wf-ignore="true"/>
+          </video>
+        </div>
+      </div>
+
+      <!-- Tile 3 -->
+      <div class="feature-tile">
+        <div class="feature-card-text-wrapper">
+          <h3 class="m-b-24 _2 left">Brand &amp; positioning that sticks</h3>
+          <p class="p-main white full-opacity">Identity, voice, and positioning built around what you actually do. Timeless work, not trend-chasing.<br/></p>
+        </div>
+        <div data-poster-url="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69404a24c8be85a455a163ab_kling_20251210_Image_to_Video_trees_and__1316_0_poster.0000000.jpg" data-video-urls="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69404a24c8be85a455a163ab_kling_20251210_Image_to_Video_trees_and__1316_0_mp4.mp4,https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69404a24c8be85a455a163ab_kling_20251210_Image_to_Video_trees_and__1316_0_webm.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="background-video w-background-video w-background-video-atom">
+          <video autoplay loop style="background-image:url('https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69404a24c8be85a455a163ab_kling_20251210_Image_to_Video_trees_and__1316_0_poster.0000000.jpg')" muted playsinline data-wf-ignore="true" data-object-fit="cover">
+            <source src="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69404a24c8be85a455a163ab_kling_20251210_Image_to_Video_trees_and__1316_0_mp4.mp4" data-wf-ignore="true"/>
+            <source src="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69404a24c8be85a455a163ab_kling_20251210_Image_to_Video_trees_and__1316_0_webm.webm" data-wf-ignore="true"/>
+          </video>
+        </div>
+        <img src="https://cdn.prod.website-files.com/694043d273dceabab479f631/69404bbcc699aed8f6e56938_1c0c357008d2ec8d3e8ba24b821aef7b_Ellipse%206.avif" loading="lazy" alt="" class="feature-gradient green"/>
+      </div>
+
+      <!-- Tile 4 -->
+      <div id="w-node-b1fca90b-2c2b-f309-8899-123f990b9746-b479f688" class="feature-tile">
+        <div class="feature-card-text-wrapper _2">
+          <h3 class="m-b-24 _2 left">Operations automation</h3>
+          <p class="p-main white full-opacity">AI-native workflows that cut the manual work out of your ops. The machine handles volume. You handle the calls that matter.</p>
+        </div>
+        <div data-poster-url="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69cac100e3d650403cb12096_leaves_blowing_in_wind_8m2smy69uhitfxarcwk9_1_poster.0000000.jpg" data-video-urls="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69cac100e3d650403cb12096_leaves_blowing_in_wind_8m2smy69uhitfxarcwk9_1_mp4.mp4,https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69cac100e3d650403cb12096_leaves_blowing_in_wind_8m2smy69uhitfxarcwk9_1_webm.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="background-video w-background-video w-background-video-atom">
+          <video autoplay loop style="background-image:url('https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69cac100e3d650403cb12096_leaves_blowing_in_wind_8m2smy69uhitfxarcwk9_1_poster.0000000.jpg')" muted playsinline data-wf-ignore="true" data-object-fit="cover">
+            <source src="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69cac100e3d650403cb12096_leaves_blowing_in_wind_8m2smy69uhitfxarcwk9_1_mp4.mp4" data-wf-ignore="true"/>
+            <source src="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69cac100e3d650403cb12096_leaves_blowing_in_wind_8m2smy69uhitfxarcwk9_1_webm.webm" data-wf-ignore="true"/>
+          </video>
+        </div>
+        <img src="https://cdn.prod.website-files.com/694043d273dceabab479f631/69404be7ca07a483e08436d7_b15bb76641db2755099bc43c6fd532f3_4.avif" loading="lazy" alt="" class="feature-gradient"/>
+      </div>
+
+    </div>
+
+    <!-- Project cards -->
+    <div class="project-cards-grid">
+
+      <div class="project-card reveal">
+        <div class="project-tags">
+          <span class="project-tag">B2B SaaS</span>
+          <span class="project-tag">2025</span>
+        </div>
+        <h3 class="project-card-title">PreQual</h3>
+        <p class="project-card-body">Builder lead qualification platform. Automated pre-qualification flow, CRM integration, and a branded client portal — built and shipped in a single sprint.</p>
+        <a href="https://prequal.au" target="_blank" class="project-card-link">View live <span class="project-card-arrow">&rarr;</span></a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-tags">
+          <span class="project-tag">Freight</span>
+          <span class="project-tag">Custom OS</span>
+          <span class="project-tag">2025</span>
+        </div>
+        <h3 class="project-card-title">Rowell Logistics</h3>
+        <p class="project-card-body">Custom freight operating system. Driver tray app, Xero-integrated RCTI invoicing, and a live consignment management dashboard — replacing spreadsheets across the whole operation.</p>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-tags">
+          <span class="project-tag">Nonprofit</span>
+          <span class="project-tag">Digital Marketing</span>
+          <span class="project-tag">2024</span>
+        </div>
+        <h3 class="project-card-title">Great Barrier Reef Foundation</h3>
+        <p class="project-card-body">Full-funnel digital marketing strategy. Campaign architecture, content systems, and audience growth for one of Australia's most recognised environmental organisations.</p>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-tags">
+          <span class="project-tag">Property</span>
+          <span class="project-tag">Brand &amp; Funnel</span>
+          <span class="project-tag">2024</span>
+        </div>
+        <h3 class="project-card-title">Nesta Builder Brokers</h3>
+        <p class="project-card-body">Brand identity, positioning, and full conversion funnel for a disruptive property brokerage. Built to stand out in a market full of sameness.</p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="how-it-works">
+  <div class="container">
+    <div class="how-it-works-top">
+      <h2 class="m-b-24 how-littlebird-works-header">How engagements work</h2>
+      <p class="p-main centered">Every engagement starts with a discovery call and ends with something shipped. Four stages, clear deliverables, no drift.</p>
+    </div>
+    <div class="w-layout-grid how-it-works-grid">
+      <div class="how-it-works-card reveal">
+        <div class="div-block-79" style="display:flex;align-items:center;justify-content:center;padding:40px 24px;font-size:3rem;font-weight:700;letter-spacing:-0.06em;opacity:0.15;">(01)</div>
+        <div class="how-it-works-text-wrapper">
+          <h6>Discovery call</h6>
+          <p class="p-main centered">Tell me what you&rsquo;re trying to achieve. I&rsquo;ll tell you whether I can help and what it would take to ship it.</p>
+        </div>
+      </div>
+      <div class="how-it-works-card reveal">
+        <div class="div-block-79" style="display:flex;align-items:center;justify-content:center;padding:40px 24px;font-size:3rem;font-weight:700;letter-spacing:-0.06em;opacity:0.15;">(02)</div>
+        <div class="how-it-works-text-wrapper _2">
+          <h6>Fixed-scope proposal</h6>
+          <p class="p-main centered">Scope, timeline, and deliverables agreed upfront. Never by the hour. No discovery retainers or six-week scoping phases.</p>
+        </div>
+      </div>
+      <div class="how-it-works-card reveal">
+        <div class="div-block-79" style="display:flex;align-items:center;justify-content:center;padding:40px 24px;font-size:3rem;font-weight:700;letter-spacing:-0.06em;opacity:0.15;">(03)</div>
+        <div class="how-it-works-text-wrapper _2">
+          <h6>Ship</h6>
+          <p class="p-main centered">Weekly progress, direct accountability, fast turnaround. One strong direction, refined through structured feedback, then in production.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES SCROLLING SECTION -->
+<div id="services" class="padding-global">
+  <div class="container-medium">
+    <div class="services_component">
+      <div id="w-node-da3856e5-209f-21a0-6c82-75613aeca799-b479f688" class="services_content">
+        <h2 class="heading-style-h3">Dom Buckland<br/>ships work.</h2>
+        <div class="ctas">
+          <div class="div-block-43">
+            <div class="div-block-31 cta-mac" style="display:flex;">
+              <a href="#contact" class="button full w-inline-block">
+                <div>Let&rsquo;s talk</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="services_items">
+
+        <!-- Service: Marketing Systems -->
+        <div class="services_item">
+          <div class="homepage-feature-div">
+            <div data-poster-url="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69d6c7effe606d7654d60e2d_Chat%20overview%20%28homepage%29%204k_poster.0000000.jpg" data-video-urls="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69d6c7effe606d7654d60e2d_Chat%20overview%20%28homepage%29%204k_mp4.mp4,https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69d6c7effe606d7654d60e2d_Chat%20overview%20%28homepage%29%204k_webm.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="feature-hero-video w-background-video w-background-video-atom">
+              <video autoplay loop style="background-image:url('https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69d6c7effe606d7654d60e2d_Chat%20overview%20%28homepage%29%204k_poster.0000000.jpg')" muted playsinline data-wf-ignore="true" data-object-fit="cover">
+                <source src="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69d6c7effe606d7654d60e2d_Chat%20overview%20%28homepage%29%204k_mp4.mp4" data-wf-ignore="true"/>
+                <source src="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69d6c7effe606d7654d60e2d_Chat%20overview%20%28homepage%29%204k_webm.webm" data-wf-ignore="true"/>
+              </video>
+            </div>
+          </div>
+          <div class="services_item-infos">
+            <h3 class="heading-style-h6">Marketing systems</h3>
+            <div class="services_desc">AI-native growth infrastructure. Content engines, lead funnels, and automation that keep producing after the engagement ends.</div>
+            <div class="pricing-link-div m-t-60 feature-section-link">
+              <div class="text-block"><a href="#contact" class="text-link">Start a conversation</a></div>
+              <a href="#contact" class="link-block-5 w-inline-block"><img src="https://cdn.prod.website-files.com/694043d273dceabab479f631/694174a6889be3f3b5ef4720_arrow.svg" loading="lazy" alt=""/></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service: Custom Software -->
+        <div class="services_item">
+          <div class="homepage-feature-div">
+            <div data-poster-url="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69d6c85526eb8265093d9e9d_Meeting%20Notes%20overview%20%28homepage%29%204k_poster.0000000.jpg" data-video-urls="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69d6c85526eb8265093d9e9d_Meeting%20Notes%20overview%20%28homepage%29%204k_mp4.mp4,https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69d6c85526eb8265093d9e9d_Meeting%20Notes%20overview%20%28homepage%29%204k_webm.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="feature-hero-video w-background-video w-background-video-atom">
+              <video autoplay loop style="background-image:url('https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69d6c85526eb8265093d9e9d_Meeting%20Notes%20overview%20%28homepage%29%204k_poster.0000000.jpg')" muted playsinline data-wf-ignore="true" data-object-fit="cover">
+                <source src="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69d6c85526eb8265093d9e9d_Meeting%20Notes%20overview%20%28homepage%29%204k_mp4.mp4" data-wf-ignore="true"/>
+                <source src="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69d6c85526eb8265093d9e9d_Meeting%20Notes%20overview%20%28homepage%29%204k_webm.webm" data-wf-ignore="true"/>
+              </video>
+            </div>
+          </div>
+          <div class="services_item-infos">
+            <h3 class="heading-style-h6">Custom software</h3>
+            <div class="services_desc">SaaS products and internal tools shipped in 90-day sprints. Next.js, Supabase, TypeScript. Production-grade from day one.</div>
+            <div class="pricing-link-div m-t-60 feature-section-link">
+              <div class="text-block"><a href="#contact" class="text-link">Start a conversation</a></div>
+              <a href="#contact" class="link-block-5 w-inline-block"><img src="https://cdn.prod.website-files.com/694043d273dceabab479f631/694174a6889be3f3b5ef4720_arrow.svg" loading="lazy" alt=""/></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service: Brand & Positioning -->
+        <div id="w-node-da3856e5-209f-21a0-6c82-75613aeca7b2-b479f688" class="services_item">
+          <div class="homepage-feature-div">
+            <div data-poster-url="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69d6c85d712f813464f2d1c1_Routines%20overview%20%28homepage%29%204k_poster.0000000.jpg" data-video-urls="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69d6c85d712f813464f2d1c1_Routines%20overview%20%28homepage%29%204k_mp4.mp4,https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69d6c85d712f813464f2d1c1_Routines%20overview%20%28homepage%29%204k_webm.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="feature-hero-video w-background-video w-background-video-atom">
+              <video autoplay loop style="background-image:url('https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69d6c85d712f813464f2d1c1_Routines%20overview%20%28homepage%29%204k_poster.0000000.jpg')" muted playsinline data-wf-ignore="true" data-object-fit="cover">
+                <source src="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69d6c85d712f813464f2d1c1_Routines%20overview%20%28homepage%29%204k_mp4.mp4" data-wf-ignore="true"/>
+                <source src="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69d6c85d712f813464f2d1c1_Routines%20overview%20%28homepage%29%204k_webm.webm" data-wf-ignore="true"/>
+              </video>
+            </div>
+          </div>
+          <div class="services_item-infos">
+            <h3 class="heading-style-h6">Brand &amp; positioning</h3>
+            <div class="services_desc">Identity and voice built around what you actually do. 4&ndash;6 week sprints. One strong direction, refined &mdash; not a mood board carousel.</div>
+            <div class="pricing-link-div m-t-60 feature-section-link">
+              <div class="text-block"><a href="#contact" class="text-link">Start a conversation</a></div>
+              <a href="#contact" class="link-block-5 w-inline-block"><img src="https://cdn.prod.website-files.com/694043d273dceabab479f631/694174a6889be3f3b5ef4720_arrow.svg" loading="lazy" width="10" alt=""/></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service: Operations Automation -->
+        <div class="services_item">
+          <div class="homepage-feature-div">
+            <div data-poster-url="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69e7f1426aebd0d3b96585f0_hummingbird%20homepagev2_poster.0000000.jpg" data-video-urls="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69e7f1426aebd0d3b96585f0_hummingbird%20homepagev2_mp4.mp4,https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69e7f1426aebd0d3b96585f0_hummingbird%20homepagev2_webm.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="feature-hero-video w-background-video w-background-video-atom">
+              <video autoplay loop style="background-image:url('https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69e7f1426aebd0d3b96585f0_hummingbird%20homepagev2_poster.0000000.jpg')" muted playsinline data-wf-ignore="true" data-object-fit="cover">
+                <source src="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69e7f1426aebd0d3b96585f0_hummingbird%20homepagev2_mp4.mp4" data-wf-ignore="true"/>
+                <source src="https://cdn.prod.website-files.com/694043d273dceabab479f631%2F69e7f1426aebd0d3b96585f0_hummingbird%20homepagev2_webm.webm" data-wf-ignore="true"/>
+              </video>
+            </div>
+          </div>
+          <div class="services_item-infos">
+            <h3 class="heading-style-h6">Operations automation</h3>
+            <div class="services_desc">AI workflows that remove the manual load from your day-to-day. The machine handles volume; I make sure taste and judgement are baked into everything that ships.</div>
+            <div class="pricing-link-div m-t-60 feature-section-link">
+              <div class="text-block"><a href="#contact" class="text-link">Start a conversation</a></div>
+              <a href="#contact" class="link-block-5 w-inline-block"><img src="https://cdn.prod.website-files.com/694043d273dceabab479f631/694174a6889be3f3b5ef4720_arrow.svg" loading="lazy" width="10" alt=""/></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIAL -->
+<section class="section-2">
+  <div class="container">
+    <blockquote class="pull-quote reveal">
+      <p class="pull-quote-text">&ldquo;Dom shipped our entire operating system in 90 days. No agency overhead, no scoping retainer &mdash; just a clear scope, direct communication, and work in production.&rdquo;</p>
+      <cite class="pull-quote-cite">Luke Rowell &mdash; Rowell Logistics</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- WHY WORK WITH ME -->
+<div id="about" class="privacy">
+  <div class="container">
+    <div class="privacy-top">
+      <h2 class="m-b-24 privacy-header">Craft, Taste<br/>(And Claude)</h2>
+      <p class="p-main centered">Eight years ago I was studying AI ethics and adoption. Now I&rsquo;m uniquely positioned — with the research, the tools, and the accountability to ship.</p>
+    </div>
+    <div class="w-layout-grid how-it-works-grid">
+      <div class="how-it-works-card reveal">
+        <img src="https://cdn.prod.website-files.com/694043d273dceabab479f631/6977a8c4464ef9b8f8945cc8_Group%2080.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/694043d273dceabab479f631/6977a8c4464ef9b8f8945cc8_Group%2080-p-500.avif 500w, https://cdn.prod.website-files.com/694043d273dceabab479f631/6977a8c4464ef9b8f8945cc8_Group%2080-p-800.avif 800w, https://cdn.prod.website-files.com/694043d273dceabab479f631/6977a8c4464ef9b8f8945cc8_Group%2080.avif 1190w" alt="" class="image-13"/>
+        <div class="how-it-works-text-wrapper _2">
+          <h6>AI-native by default</h6>
+          <p class="p-main centered">The machine handles volume. I handle taste, judgement, and the call on what ships.</p>
+        </div>
+      </div>
+      <div class="how-it-works-card reveal">
+        <img src="https://cdn.prod.website-files.com/694043d273dceabab479f631/6945657b941725432e496c5e_Group%2081.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/694043d273dceabab479f631/6945657b941725432e496c5e_Group%2081-p-500.avif 500w, https://cdn.prod.website-files.com/694043d273dceabab479f631/6945657b941725432e496c5e_Group%2081.avif 1190w" alt="" class="image-13"/>
+        <div class="how-it-works-text-wrapper _2">
+          <h6>Streamlined process</h6>
+          <p class="p-main centered">Weekly progress calls, direct accountability, fast turnaround. No retainers, no drift.</p>
+        </div>
+      </div>
+      <div class="how-it-works-card reveal">
+        <img src="https://cdn.prod.website-files.com/694043d273dceabab479f631/6945657b54e67b811e775205_Group%2079.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/694043d273dceabab479f631/6945657b54e67b811e775205_Group%2079-p-500.avif 500w, https://cdn.prod.website-files.com/694043d273dceabab479f631/6945657b54e67b811e775205_Group%2079.avif 1190w" alt="" class="image-13"/>
+        <div class="how-it-works-text-wrapper _2">
+          <h6>Work that&rsquo;s actually in production</h6>
+          <p class="p-main centered">No half-finished prototypes. Scope is agreed, milestones locked, deliverables shipped.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w-layout-hflex flex-block-8" style="font-size:0.8rem;opacity:0.5;letter-spacing:0.06em;text-transform:uppercase;font-weight:500;gap:20px;">
+      <span>15+ Years experience</span>
+      <span>30+ Engagements shipped</span>
+      <span>10M+ People reached</span>
+      <span>90d Default sprint length</span>
+    </div>
+    <div class="privacy-link-div">
+      <div class="text-block"><span class="text-opaque">Based in Brisbane, working globally. </span><a href="https://linkedin.com/in/dombuckland" class="text-link">View LinkedIn</a></div>
+      <a href="https://linkedin.com/in/dombuckland" class="w-inline-block"><img src="https://cdn.prod.website-files.com/694043d273dceabab479f631/694174a6889be3f3b5ef4720_arrow.svg" loading="lazy" alt=""/></a>
+    </div>
+  </div>
+</div>
+
+<!-- FAQs -->
+<div id="faqs" class="faqs">
+  <div class="container">
+    <div class="faq-flex">
+      <div class="features-top faq__left">
+        <h2 class="m-b-24 left">Wondering how I work?</h2>
+        <div class="ctas">
+          <div class="div-block-43">
+            <div class="div-block-31 cta-mac" style="display:flex;">
+              <a href="#contact" class="button w-inline-block">
+                <div>Contact me</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__list">
+        <div data-w-id="4efa8120-6028-a8c6-e33f-65701451316e" class="faq-row">
+          <div class="faq__left">
+            <div class="faq__title">What kind of clients do you work with?</div>
+            <p class="faq-answer">Operators and founder-led businesses where the work needs to ship. Typical engagements are Australian SMEs — logistics, construction, property, nonprofit — and product teams who need a senior operator without the agency overhead.</p>
+          </div>
+          <img src="https://cdn.prod.website-files.com/694043d273dceabab479f631/69417765587c591e77bce9fb_plus.svg" loading="lazy" alt="" class="faq__plus"/>
+        </div>
+        <div data-w-id="4efa8120-6028-a8c6-e33f-657014513179" class="faq-row">
+          <div class="faq__left">
+            <div class="faq__title">What services do you offer?</div>
+            <p class="faq-answer">Marketing systems, custom software, brand &amp; positioning, and operations automation. Most engagements cross disciplines — which is usually where the leverage lives.</p>
+          </div>
+          <img src="https://cdn.prod.website-files.com/694043d273dceabab479f631/69417765587c591e77bce9fb_plus.svg" loading="lazy" alt="" class="faq__plus"/>
+        </div>
+        <div data-w-id="caee13d2-0ef4-9593-c078-5a08a9771230" class="faq-row">
+          <div class="faq__left">
+            <div class="faq__title">How do you price your projects?</div>
+            <p class="faq-answer">Scope, timeline, and deliverables. Never by the hour. After a discovery call I send a fixed-scope proposal. Monthly partnerships for continuous delivery; 90-day sprints for scoped outcomes.</p>
+          </div>
+          <img src="https://cdn.prod.website-files.com/694043d273dceabab479f631/69417765587c591e77bce9fb_plus.svg" loading="lazy" alt="" class="faq__plus"/>
+        </div>
+        <div data-w-id="4efa8120-6028-a8c6-e33f-657014513180" class="faq-row">
+          <div class="faq__left">
+            <div class="faq__title">What is your typical timeline?</div>
+            <p class="faq-answer">Branding sprints 4&ndash;6 weeks; software sprints 8&ndash;12 weeks; monthly partnerships are ongoing. Milestones agreed before kickoff.</p>
+          </div>
+          <img src="https://cdn.prod.website-files.com/694043d273dceabab479f631/69417765587c591e77bce9fb_plus.svg" loading="lazy" alt="" class="faq__plus"/>
+        </div>
+        <div data-w-id="4efa8120-6028-a8c6-e33f-657014513187" class="faq-row">
+          <div class="faq__left">
+            <div class="faq__title">Do you work remotely?</div>
+            <p class="faq-answer">Yes. Based in Brisbane, working with clients across Australia and globally. Weekly calls, shared working docs, and direct access by Slack or email keep things tight.</p>
+          </div>
+          <img src="https://cdn.prod.website-files.com/694043d273dceabab479f631/69417765587c591e77bce9fb_plus.svg" loading="lazy" alt="" class="faq__plus"/>
+        </div>
+        <div data-w-id="4efa8120-6028-a8c6-e33f-657014513192" class="faq-row">
+          <div class="faq__left">
+            <div class="faq__title">Do you take on one-off tasks?</div>
+            <p class="faq-answer">I prefer full-scope engagements for cohesion. Smaller, well-defined pieces are possible when they fit the bench. Reach out and I&rsquo;ll tell you straight.</p>
+          </div>
+          <img src="https://cdn.prod.website-files.com/694043d273dceabab479f631/69417765587c591e77bce9fb_plus.svg" loading="lazy" alt="" class="faq__plus"/>
+        </div>
+        <div data-w-id="4efa8120-6028-a8c6-e33f-657014513199" class="faq-row">
+          <div class="faq__left">
+            <div class="faq__title">How many revisions are included?</div>
+            <p class="faq-answer">One strong direction, refined through structured feedback. The number of revision rounds depends on scope, but clarity and alignment are the priority from the start.</p>
+          </div>
+          <img src="https://cdn.prod.website-files.com/694043d273dceabab479f631/69417765587c591e77bce9fb_plus.svg" loading="lazy" alt="" class="faq__plus"/>
+        </div>
+        <div data-w-id="4a83f788-31f7-2915-eb63-cc56367b1e68" class="faq-row">
+          <div class="faq__left">
+            <div class="faq__title">What is an AI-native studio?</div>
+            <p class="faq-answer">A practice built from the ground up around AI tools and workflows — not an agency retrofitting AI into its existing model. It means one operator using AI as a force multiplier to produce the output of a larger team: faster, fewer handoffs, lower cost.</p>
+          </div>
+          <img src="https://cdn.prod.website-files.com/694043d273dceabab479f631/69417765587c591e77bce9fb_plus.svg" loading="lazy" alt="" class="faq__plus"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA SECTION -->
+<div id="contact" class="cta">
+  <div class="container">
+    <div class="cta-block">
+      <div class="cta-inner">
+        <h2 class="m-b-24">Got something to ship?</h2>
+        <p class="p-main white cta-text centered">Tell me what you&rsquo;re trying to achieve. I&rsquo;ll tell you whether I can help — no discovery retainers, no six-week scoping phases.</p>
+        <div class="ctas">
+          <div class="div-block-43">
+            <div class="div-block-31 cta-mac" style="display:flex;">
+              <a href="mailto:dom@dombuckland.ai" class="button w-inline-block">
+                <div>dom@dombuckland.ai</div>
+              </a>
+            </div>
+            <div class="div-block-31 cta-mac" style="display:flex;">
+              <a href="https://dombuckland.ai" class="button w-inline-block" style="background:transparent;border:1.5px solid rgba(255,255,255,0.3);">
+                <div>dombuckland.ai</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="w-layout-grid grid">
+    <div class="div-block-3">
+      <div class="footer-col-title">Work</div>
+      <a href="#work" class="footer-link">Selected projects</a>
+      <a href="#services" class="footer-link">Services</a>
+      <a href="#pricing" class="footer-link">Pricing</a>
+    </div>
+    <div class="div-block-3">
+      <div class="footer-col-title">Studio</div>
+      <a href="#about" class="footer-link">About</a>
+      <a href="#faqs" class="footer-link">FAQs</a>
+      <a href="https://dombuckland.ai/thinking" class="footer-link">Notes</a>
+    </div>
+    <div class="div-block-3">
+      <div class="footer-col-title">Contact</div>
+      <a href="mailto:dom@dombuckland.ai" class="footer-link">dom@dombuckland.ai</a>
+      <a href="https://linkedin.com/in/dombuckland" target="_blank" class="footer-link">LinkedIn</a>
+      <a href="https://dombuckland.ai" class="footer-link">dombuckland.ai</a>
+    </div>
+  </div>
+  <div class="footer-wordmark">
+    Dom Buckland<sup>®</sup>
+  </div>
+  <div class="container footer-container">
+    <div class="div-block-69">
+      <div class="footer-legal">Whether you&rsquo;re scoping a marketing system, rebuilding a brand, or exploring an idea &mdash; I&rsquo;d love to hear from you, Dom. &copy; 2026</div>
+      <div class="div-block-71">
+        <a href="https://dombuckland.ai/privacy-policy" class="footer-link">Privacy policy</a>
+      </div>
+    </div>
+    <div class="w-layout-hflex flex-block-8" style="font-size:0.75rem;opacity:0.4;letter-spacing:0.04em;">
+      <span>AI-native Studio</span>
+      <span>Brisbane, AU</span>
+      <span>Available Q3 2026</span>
+    </div>
+    <div class="div-block-70">
+      <div class="div-block-41">
+        <a href="https://linkedin.com/in/dombuckland" class="w-inline-block"><img src="https://cdn.prod.website-files.com/694043d273dceabab479f631/698baa6bafac5edff4fbee57_Linkedin-Logo--Streamline-Ultimate.svg" loading="lazy" alt="LinkedIn logo"/></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Webflow runtime (navbar, dropdowns, lightbox, background video) -->
+<script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=694043d273dceabab479f631" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdn.prod.website-files.com/694043d273dceabab479f631/js/webflow.schunk.36b8fb49256177c8.js" type="text/javascript" crossorigin="anonymous"></script>
+<script src="https://cdn.prod.website-files.com/694043d273dceabab479f631/js/webflow.schunk.33e2315ff0adcf59.js" type="text/javascript" crossorigin="anonymous"></script>
+<script src="https://cdn.prod.website-files.com/694043d273dceabab479f631/js/webflow.schunk.121b0d7ff03e0f4a.js" type="text/javascript" crossorigin="anonymous"></script>
+<script src="https://cdn.prod.website-files.com/694043d273dceabab479f631/js/webflow.schunk.9dfb96661114d3db.js" type="text/javascript" crossorigin="anonymous"></script>
+<script src="https://cdn.prod.website-files.com/694043d273dceabab479f631/js/webflow.a7178683.7fa949bf2c25cff7.js" type="text/javascript" crossorigin="anonymous"></script>
+
+<script>
+// 4-palette theme switcher
+(function() {
+  var root = document.documentElement;
+  var stored = localStorage.getItem('theme') || 'light';
+  root.setAttribute('data-theme', stored);
+
+  function setTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    document.querySelectorAll('#theme-switcher button').forEach(function(btn) {
+      btn.classList.toggle('active', btn.dataset.themeVal === theme);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var switcher = document.getElementById('theme-switcher');
+    if (!switcher) return;
+    switcher.querySelectorAll('button').forEach(function(btn) {
+      btn.addEventListener('click', function() { setTheme(btn.dataset.themeVal); });
+    });
+    setTheme(stored);
+  });
+})();
+
+// Grain overlay
+(function() {
+  var c = document.createElement('canvas');
+  c.width = c.height = 256;
+  var ctx = c.getContext('2d');
+  var d = ctx.createImageData(256, 256);
+  for (var i = 0; i < d.data.length; i += 4) {
+    var v = Math.random() * 255 | 0;
+    d.data[i] = d.data[i+1] = d.data[i+2] = v;
+    d.data[i+3] = 255;
+  }
+  ctx.putImageData(d, 0, 0);
+  var el = document.createElement('div');
+  el.id = 'grain-overlay';
+  el.style.backgroundImage = 'url(' + c.toDataURL() + ')';
+  document.documentElement.appendChild(el);
+})();
+
+// Scroll reveal
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var el = entry.target;
+        var delay = parseInt(el.dataset.revealDelay) || 0;
+        setTimeout(function() { el.classList.add('visible'); }, delay);
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var cards = document.querySelectorAll('.project-cards-grid .reveal');
+    cards.forEach(function(el, i) { el.dataset.revealDelay = i * 90; observer.observe(el); });
+    document.querySelectorAll('.how-it-works-card.reveal').forEach(function(el, i) {
+      el.dataset.revealDelay = i * 100; observer.observe(el);
+    });
+  });
+})();
+
+// Mobile nav close on link click
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.w-nav-menu a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      var btn = document.querySelector('.w-nav-button');
+      if (btn && btn.offsetParent !== null) btn.click();
+    });
+  });
+});
+</script>
+
+</body>
+</html>
