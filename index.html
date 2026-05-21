@@ -97,42 +97,104 @@
     :root[data-theme="blue"] .navbar { background-color: rgba(4,9,26,0.75) !important; }
     :root[data-theme="red"]  .navbar { background-color: rgba(17,7,7,0.78) !important; }
 
-    /* 4-quadrant theme switcher */
-    #theme-switcher {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      width: 28px;
-      height: 28px;
-      border-radius: 5px;
-      overflow: hidden;
-      border: 1.5px solid rgba(17,16,9,0.14);
-      gap: 1.5px;
-      background: rgba(17,16,9,0.1);
+    /* ── Dark/light toggle + artist unlock popup ───────────── */
+    #theme-toggle-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
       flex-shrink: 0;
+      /* Extend hover target down to bridge gap to popup */
+      padding-bottom: 18px;
+      margin-bottom: -18px;
+    }
+    #theme-toggle {
+      width: 44px;
+      height: 24px;
+      border-radius: 100px;
+      background: rgba(17,16,9,0.1);
+      border: 1.5px solid rgba(17,16,9,0.16);
+      position: relative;
       cursor: pointer;
+      transition: background 0.25s ease, border-color 0.25s ease;
+      user-select: none;
+      flex-shrink: 0;
     }
-    :root[data-theme="dark"] #theme-switcher,
-    :root[data-theme="blue"] #theme-switcher,
-    :root[data-theme="red"]  #theme-switcher {
-      border-color: rgba(255,255,255,0.15);
-      background: rgba(255,255,255,0.08);
+    :root[data-theme="dark"]    #theme-toggle,
+    :root[data-theme="albers"]  #theme-toggle,
+    :root[data-theme="vincent"] #theme-toggle,
+    :root[data-theme="warhol"]  #theme-toggle {
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,255,255,0.22);
     }
-    #theme-switcher button {
+    #toggle-thumb {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--text);
+      transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.22s ease;
+    }
+    /* Dark + artist states: thumb right */
+    :root[data-theme="dark"]    #toggle-thumb,
+    :root[data-theme="albers"]  #toggle-thumb,
+    :root[data-theme="vincent"] #toggle-thumb,
+    :root[data-theme="warhol"]  #toggle-thumb { transform: translateX(20px); }
+    /* Hover: thumb unlocks past the edge */
+    #theme-toggle-wrap:hover #toggle-thumb {
+      transform: translateX(27px) !important;
+      box-shadow: 0 0 0 3px rgba(196,98,45,0.2);
+    }
+    /* Artist popup — drops below toggle */
+    #artist-popup {
+      position: absolute;
+      top: 30px;
+      right: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 16px;
+      background: var(--surface);
+      border: 1px solid rgba(17,16,9,0.08);
+      border-radius: 100px;
+      box-shadow: 0 8px 28px rgba(17,16,9,0.1);
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-5px) scale(0.97);
+      transform-origin: top right;
+      transition: opacity 0.18s ease, transform 0.22s cubic-bezier(0.22,1,0.36,1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    :root[data-theme="dark"]    #artist-popup,
+    :root[data-theme="albers"]  #artist-popup,
+    :root[data-theme="vincent"] #artist-popup,
+    :root[data-theme="warhol"]  #artist-popup {
+      border-color: rgba(255,255,255,0.1);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+    }
+    #theme-toggle-wrap:hover #artist-popup {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0) scale(1);
+    }
+    .artist-opt {
+      font-family: 'Meraki', Georgia, serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.03em;
+      background: none;
       border: none;
-      padding: 0;
-      margin: 0;
-      cursor: pointer;
+      color: var(--text);
       opacity: 0.45;
-      transition: opacity 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      padding: 2px 0;
+      transition: opacity 0.18s ease;
     }
-    #theme-switcher button:hover { opacity: 0.8; }
-    #theme-switcher button.active { opacity: 1; box-shadow: inset 0 0 0 2px rgba(255,255,255,0.55); }
-    #theme-switcher button[data-theme-val="light"].active { box-shadow: inset 0 0 0 2px rgba(17,16,9,0.3); }
-    #theme-switcher button[data-theme-val="light"] { background: #F5F0E8; }
-    #theme-switcher button[data-theme-val="dark"]  { background: #0E0F0A; }
-    #theme-switcher button[data-theme-val="red"]   { background: #C23B3B; }
-    #theme-switcher button[data-theme-val="blue"]  { background: #3B7EFF; }
+    .artist-opt:hover { opacity: 1; }
+    .artist-opt.active { opacity: 1; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    .artist-pop-dot { color: var(--text); opacity: 0.2; font-size: 0.6rem; user-select: none; }
 
     h1, h2, h3, h4, h5, h6,
     .hero-left, .features_header, .how-littlebird-works-header,
@@ -487,35 +549,6 @@
       opacity: 0.65 !important;
     }
 
-    /* ── Artist nav strip ───────────────────────────────────── */
-    .artist-nav {
-      position: sticky;
-      top: 52px;
-      z-index: 99;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      padding: 6px 5%;
-      background: transparent;
-      transition: opacity 0.3s ease;
-    }
-
-    .artist-toggle {
-      font-family: 'Meraki', Georgia, serif;
-      font-size: 0.78rem;
-      background: none;
-      border: none;
-      color: var(--text);
-      opacity: 0.4;
-      cursor: pointer;
-      padding: 0;
-      letter-spacing: 0.02em;
-      transition: opacity 0.22s ease;
-    }
-    .artist-toggle:hover { opacity: 0.85; }
-    .artist-toggle.active { opacity: 1; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
-    .artist-sep { color: var(--text); opacity: 0.2; font-size: 0.65rem; }
 
     /* ── Client strip separator dots ───────────────────────── */
     .privacy-hero span + span::before {
@@ -644,11 +677,17 @@
       </nav>
 
       <div class="div-block-5">
-        <div id="theme-switcher" role="group" aria-label="Switch colour palette">
-          <button data-theme-val="light"  aria-label="Light"></button>
-          <button data-theme-val="dark"   aria-label="Dark"></button>
-          <button data-theme-val="red"    aria-label="Red"></button>
-          <button data-theme-val="blue"   aria-label="Blue"></button>
+        <div id="theme-toggle-wrap">
+          <div id="theme-toggle" role="switch" aria-label="Toggle dark mode" tabindex="0">
+            <div id="toggle-thumb"></div>
+          </div>
+          <div id="artist-popup" role="group" aria-label="Artist palette">
+            <button class="artist-opt" data-theme-val="albers">Albers</button>
+            <span class="artist-pop-dot">&middot;</span>
+            <button class="artist-opt" data-theme-val="vincent">Vincent</button>
+            <span class="artist-pop-dot">&middot;</span>
+            <button class="artist-opt" data-theme-val="warhol">Warhol</button>
+          </div>
         </div>
         <div class="div-block-31 cta-mac" style="display:flex;">
           <a href="#contact" class="button m-t-0 nav-btn w-inline-block">
@@ -661,14 +700,6 @@
   </div>
 </div>
 
-<!-- ARTIST PALETTE STRIP -->
-<div class="artist-nav">
-  <button class="artist-toggle" data-theme-val="albers">Albers</button>
-  <span class="artist-sep">&middot;</span>
-  <button class="artist-toggle" data-theme-val="vincent">Vincent</button>
-  <span class="artist-sep">&middot;</span>
-  <button class="artist-toggle" data-theme-val="warhol">Warhol</button>
-</div>
 
 <div class="overlay"></div>
 
@@ -1198,40 +1229,46 @@
 <script src="https://cdn.prod.website-files.com/694043d273dceabab479f631/js/webflow.a7178683.7fa949bf2c25cff7.js" type="text/javascript" crossorigin="anonymous"></script>
 
 <script>
-// 4-palette theme switcher
+// Theme toggle: dark/light switch + artist unlock popup
 (function() {
   var root = document.documentElement;
+  var artistThemes = ['albers', 'vincent', 'warhol'];
   var stored = localStorage.getItem('theme') || 'light';
   root.setAttribute('data-theme', stored);
 
-  var artistThemes = ['albers', 'leonardo', 'warhol'];
+  function isDark(theme) {
+    return theme === 'dark' || artistThemes.indexOf(theme) !== -1;
+  }
 
   function setTheme(theme) {
     root.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
-    document.querySelectorAll('#theme-switcher button').forEach(function(btn) {
-      btn.classList.toggle('active', btn.dataset.themeVal === theme);
-    });
-    document.querySelectorAll('.artist-toggle').forEach(function(btn) {
+    var toggle = document.getElementById('theme-toggle');
+    if (toggle) toggle.setAttribute('aria-checked', isDark(theme) ? 'true' : 'false');
+    document.querySelectorAll('.artist-opt').forEach(function(btn) {
       btn.classList.toggle('active', btn.dataset.themeVal === theme);
     });
   }
 
   document.addEventListener('DOMContentLoaded', function() {
-    var switcher = document.getElementById('theme-switcher');
-    if (switcher) {
-      switcher.querySelectorAll('button').forEach(function(btn) {
-        btn.addEventListener('click', function() { setTheme(btn.dataset.themeVal); });
+    var toggle = document.getElementById('theme-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', function() {
+        var cur = root.getAttribute('data-theme');
+        setTheme(isDark(cur) ? 'light' : 'dark');
+      });
+      toggle.addEventListener('keydown', function(e) {
+        if (e.key === ' ' || e.key === 'Enter') {
+          e.preventDefault();
+          toggle.click();
+        }
       });
     }
-    document.querySelectorAll('.artist-toggle').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var current = root.getAttribute('data-theme');
-        if (current === btn.dataset.themeVal) {
-          setTheme('light');
-        } else {
-          setTheme(btn.dataset.themeVal);
-        }
+    document.querySelectorAll('.artist-opt').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var cur = root.getAttribute('data-theme');
+        setTheme(cur === btn.dataset.themeVal ? 'light' : btn.dataset.themeVal);
       });
     });
     setTheme(stored);
