@@ -64,34 +64,50 @@
     }
 
     /* Dark-theme shared overrides (all non-light themes) */
-    :root[data-theme="dark"] .section-2,
-    :root[data-theme="blue"] .section-2,
-    :root[data-theme="red"]  .section-2,
-    :root[data-theme="dark"] .how-it-works,
-    :root[data-theme="blue"] .how-it-works,
-    :root[data-theme="red"]  .how-it-works,
-    :root[data-theme="dark"] .faqs,
-    :root[data-theme="blue"] .faqs,
-    :root[data-theme="red"]  .faqs { border-top-color: rgba(255,255,255,0.05) !important; }
+    :root[data-theme="dark"]    .section-2,
+    :root[data-theme="blue"]    .section-2,
+    :root[data-theme="red"]     .section-2,
+    :root[data-theme="matisse"] .section-2,
+    :root[data-theme="atelier"] .section-2,
+    :root[data-theme="dark"]    .how-it-works,
+    :root[data-theme="blue"]    .how-it-works,
+    :root[data-theme="red"]     .how-it-works,
+    :root[data-theme="matisse"] .how-it-works,
+    :root[data-theme="atelier"] .how-it-works,
+    :root[data-theme="dark"]    .faqs,
+    :root[data-theme="blue"]    .faqs,
+    :root[data-theme="red"]     .faqs,
+    :root[data-theme="matisse"] .faqs,
+    :root[data-theme="atelier"] .faqs { border-top-color: rgba(255,255,255,0.05) !important; }
 
-    :root[data-theme="dark"] .how-it-works-card,
-    :root[data-theme="blue"] .how-it-works-card,
-    :root[data-theme="red"]  .how-it-works-card,
-    :root[data-theme="dark"] .privacy .how-it-works-card,
-    :root[data-theme="blue"] .privacy .how-it-works-card,
-    :root[data-theme="red"]  .privacy .how-it-works-card { border-color: rgba(255,255,255,0.06) !important; }
+    :root[data-theme="dark"]    .how-it-works-card,
+    :root[data-theme="blue"]    .how-it-works-card,
+    :root[data-theme="red"]     .how-it-works-card,
+    :root[data-theme="matisse"] .how-it-works-card,
+    :root[data-theme="atelier"] .how-it-works-card,
+    :root[data-theme="dark"]    .privacy .how-it-works-card,
+    :root[data-theme="blue"]    .privacy .how-it-works-card,
+    :root[data-theme="red"]     .privacy .how-it-works-card,
+    :root[data-theme="matisse"] .privacy .how-it-works-card,
+    :root[data-theme="atelier"] .privacy .how-it-works-card { border-color: rgba(255,255,255,0.06) !important; }
 
-    :root[data-theme="dark"] .project-card,
-    :root[data-theme="blue"] .project-card,
-    :root[data-theme="red"]  .project-card { border-color: rgba(255,255,255,0.07) !important; }
+    :root[data-theme="dark"]    .project-card,
+    :root[data-theme="blue"]    .project-card,
+    :root[data-theme="red"]     .project-card,
+    :root[data-theme="matisse"] .project-card,
+    :root[data-theme="atelier"] .project-card { border-color: rgba(255,255,255,0.07) !important; }
 
-    :root[data-theme="dark"] .faq-row,
-    :root[data-theme="blue"] .faq-row,
-    :root[data-theme="red"]  .faq-row { border-color: rgba(255,255,255,0.08) !important; }
+    :root[data-theme="dark"]    .faq-row,
+    :root[data-theme="blue"]    .faq-row,
+    :root[data-theme="red"]     .faq-row,
+    :root[data-theme="matisse"] .faq-row,
+    :root[data-theme="atelier"] .faq-row { border-color: rgba(255,255,255,0.08) !important; }
 
-    :root[data-theme="dark"] #grain-overlay,
-    :root[data-theme="blue"] #grain-overlay,
-    :root[data-theme="red"]  #grain-overlay { mix-blend-mode: screen; opacity: 0.025; }
+    :root[data-theme="dark"]    #grain-overlay,
+    :root[data-theme="blue"]    #grain-overlay,
+    :root[data-theme="red"]     #grain-overlay,
+    :root[data-theme="matisse"] #grain-overlay,
+    :root[data-theme="atelier"] #grain-overlay { mix-blend-mode: screen; opacity: 0.025; }
 
 
     :root[data-theme="blue"] .navbar { background-color: rgba(4,9,26,0.75) !important; }
@@ -128,7 +144,9 @@
     :root[data-theme="dark"]    #theme-toggle,
     :root[data-theme="albers"]  #theme-toggle,
     :root[data-theme="vincent"] #theme-toggle,
-    :root[data-theme="warhol"]  #theme-toggle {
+    :root[data-theme="warhol"]  #theme-toggle,
+    :root[data-theme="matisse"] #theme-toggle,
+    :root[data-theme="atelier"] #theme-toggle {
       background: rgba(255,255,255,0.14);
       border-color: rgba(255,255,255,0.22);
     }
@@ -146,7 +164,9 @@
     :root[data-theme="dark"]    #toggle-thumb,
     :root[data-theme="albers"]  #toggle-thumb,
     :root[data-theme="vincent"] #toggle-thumb,
-    :root[data-theme="warhol"]  #toggle-thumb { transform: translateX(18px); }
+    :root[data-theme="warhol"]  #toggle-thumb,
+    :root[data-theme="matisse"] #toggle-thumb,
+    :root[data-theme="atelier"] #toggle-thumb { transform: translateX(18px); }
     /* Hover: thumb pushed against right wall — overflow:hidden clips it cleanly */
     #theme-toggle-wrap:hover #toggle-thumb {
       transform: translateX(24px) !important;
@@ -176,7 +196,9 @@
     :root[data-theme="dark"]    #artist-popup,
     :root[data-theme="albers"]  #artist-popup,
     :root[data-theme="vincent"] #artist-popup,
-    :root[data-theme="warhol"]  #artist-popup {
+    :root[data-theme="warhol"]  #artist-popup,
+    :root[data-theme="matisse"] #artist-popup,
+    :root[data-theme="atelier"] #artist-popup {
       border-color: rgba(255,255,255,0.1);
       box-shadow: 0 8px 28px rgba(0,0,0,0.25);
     }
@@ -554,6 +576,52 @@
       opacity: 0.65 !important;
     }
 
+    /* ── Matisse — Chapel de Vence: deep forest, warm cream ─────── */
+    /* Flat colour planes, paper-cut precision, no noise             */
+    :root[data-theme="matisse"] {
+      --bg:      #1B4A3B;
+      --surface: #224D3F;
+      --dark:    #F2EDE0;
+      --accent:  #F2EDE0;
+      --accent-dark: #E0D8C0;
+      --text:    #F2EDE0;
+      --muted:   rgba(242,237,224,0.5);
+    }
+    :root[data-theme="matisse"] .navbar { background-color: rgba(27,74,59,0.88) !important; }
+    :root[data-theme="matisse"] .button { background-color: #F2EDE0 !important; color: #1B4A3B !important; }
+    :root[data-theme="matisse"] .cta .button { background-color: #1B4A3B !important; color: #F2EDE0 !important; border: 1.5px solid rgba(242,237,224,0.4) !important; }
+    :root[data-theme="matisse"] .how-it-works-card,
+    :root[data-theme="matisse"] .privacy .how-it-works-card { border-color: rgba(242,237,224,0.1) !important; }
+    :root[data-theme="matisse"] .project-card { border-color: rgba(242,237,224,0.1) !important; }
+    :root[data-theme="matisse"] .faq-row { border-color: rgba(242,237,224,0.1) !important; }
+    :root[data-theme="matisse"] .section-2,
+    :root[data-theme="matisse"] .how-it-works,
+    :root[data-theme="matisse"] .faqs { border-top-color: rgba(242,237,224,0.07) !important; }
+    /* Matisse: paper cut — no grain, pure flat planes */
+    :root[data-theme="matisse"] #grain-overlay { opacity: 0 !important; }
+
+    /* ── Atelier — Studio wall: wine field, terracotta mark ──────── */
+    /* Craft, material, warmth — the unfinished work on the wall     */
+    :root[data-theme="atelier"] {
+      --bg:      #7B1E2E;
+      --surface: #9B2A40;
+      --dark:    #F2EDE0;
+      --accent:  #E0693C;
+      --accent-dark: #C45028;
+      --text:    #F2EDE0;
+      --muted:   rgba(242,237,224,0.55);
+    }
+    :root[data-theme="atelier"] .navbar { background-color: rgba(123,30,46,0.88) !important; }
+    :root[data-theme="atelier"] .button { background-color: #E0693C !important; color: #F2EDE0 !important; }
+    :root[data-theme="atelier"] .how-it-works-card,
+    :root[data-theme="atelier"] .privacy .how-it-works-card { border-color: rgba(242,237,224,0.1) !important; }
+    :root[data-theme="atelier"] .project-card { border-color: rgba(242,237,224,0.1) !important; }
+    :root[data-theme="atelier"] .faq-row { border-color: rgba(242,237,224,0.1) !important; }
+    :root[data-theme="atelier"] .section-2,
+    :root[data-theme="atelier"] .how-it-works,
+    :root[data-theme="atelier"] .faqs { border-top-color: rgba(242,237,224,0.07) !important; }
+    :root[data-theme="atelier"] #grain-overlay { mix-blend-mode: screen !important; opacity: 0.04 !important; }
+
 
     /* ── Client strip separator dots ───────────────────────── */
     .privacy-hero span + span::before {
@@ -694,14 +762,18 @@
     :root[data-theme="dark"]    #cookie-wrap,
     :root[data-theme="albers"]  #cookie-wrap,
     :root[data-theme="vincent"] #cookie-wrap,
-    :root[data-theme="warhol"]  #cookie-wrap {
+    :root[data-theme="warhol"]  #cookie-wrap,
+    :root[data-theme="matisse"] #cookie-wrap,
+    :root[data-theme="atelier"] #cookie-wrap {
       border-color: rgba(255,255,255,0.1);
       box-shadow: 0 4px 18px rgba(0,0,0,0.2);
     }
     :root[data-theme="dark"]    #cookie-wrap.expanded,
     :root[data-theme="albers"]  #cookie-wrap.expanded,
     :root[data-theme="vincent"] #cookie-wrap.expanded,
-    :root[data-theme="warhol"]  #cookie-wrap.expanded {
+    :root[data-theme="warhol"]  #cookie-wrap.expanded,
+    :root[data-theme="matisse"] #cookie-wrap.expanded,
+    :root[data-theme="atelier"] #cookie-wrap.expanded {
       box-shadow: 0 24px 64px rgba(0,0,0,0.3), 0 4px 14px rgba(0,0,0,0.18);
     }
     /* Cookie icon — shown when collapsed */
@@ -755,7 +827,9 @@
     :root[data-theme="dark"]    .cookie-close:hover,
     :root[data-theme="albers"]  .cookie-close:hover,
     :root[data-theme="vincent"] .cookie-close:hover,
-    :root[data-theme="warhol"]  .cookie-close:hover { background: rgba(255,255,255,0.08); }
+    :root[data-theme="warhol"]  .cookie-close:hover,
+    :root[data-theme="matisse"] .cookie-close:hover,
+    :root[data-theme="atelier"] .cookie-close:hover { background: rgba(255,255,255,0.08); }
     .cookie-intro {
       font-size: 0.73rem;
       line-height: 1.55;
@@ -767,7 +841,9 @@
     :root[data-theme="dark"]    .cookie-intro,
     :root[data-theme="albers"]  .cookie-intro,
     :root[data-theme="vincent"] .cookie-intro,
-    :root[data-theme="warhol"]  .cookie-intro { border-bottom-color: rgba(255,255,255,0.07); }
+    :root[data-theme="warhol"]  .cookie-intro,
+    :root[data-theme="matisse"] .cookie-intro,
+    :root[data-theme="atelier"] .cookie-intro { border-bottom-color: rgba(255,255,255,0.07); }
     .cookie-cats { padding: 2px 0; }
     .cookie-cat {
       display: flex;
@@ -813,7 +889,11 @@
     :root[data-theme="dark"]    .cat-toggle,
     :root[data-theme="albers"]  .cat-toggle,
     :root[data-theme="vincent"] .cat-toggle,
-    :root[data-theme="warhol"]  .cat-toggle { background: rgba(255,255,255,0.14); }
+    :root[data-theme="warhol"]  .cat-toggle,
+    :root[data-theme="matisse"] .cat-toggle,
+    :root[data-theme="atelier"] .cat-toggle { background: rgba(255,255,255,0.14); }
+    :root[data-theme="matisse"] .cat-toggle[aria-pressed="true"] { background: #F2EDE0; }
+    :root[data-theme="matisse"] .cat-toggle[aria-pressed="true"] .cat-toggle-thumb { background: #1B4A3B; }
     .cat-toggle[aria-pressed="true"] { background: var(--accent); }
     :root[data-theme="albers"] .cat-toggle[aria-pressed="true"] { background: #2A1000; }
     .cat-toggle-thumb {
@@ -837,7 +917,9 @@
     :root[data-theme="dark"]    .cookie-ft,
     :root[data-theme="albers"]  .cookie-ft,
     :root[data-theme="vincent"] .cookie-ft,
-    :root[data-theme="warhol"]  .cookie-ft { border-top-color: rgba(255,255,255,0.07); }
+    :root[data-theme="warhol"]  .cookie-ft,
+    :root[data-theme="matisse"] .cookie-ft,
+    :root[data-theme="atelier"] .cookie-ft { border-top-color: rgba(255,255,255,0.07); }
     #cookie-decline-all {
       font-size: 0.73rem;
       font-family: inherit;
@@ -909,6 +991,10 @@
             <button class="artist-opt" data-theme-val="vincent">Vincent</button>
             <span class="artist-pop-dot">&middot;</span>
             <button class="artist-opt" data-theme-val="warhol">Warhol</button>
+            <span class="artist-pop-dot">&middot;</span>
+            <button class="artist-opt" data-theme-val="matisse">Matisse</button>
+            <span class="artist-pop-dot">&middot;</span>
+            <button class="artist-opt" data-theme-val="atelier">Atelier</button>
           </div>
         </div>
         <div class="div-block-31 cta-mac" style="display:flex;">
@@ -1454,7 +1540,7 @@
 // Theme toggle: dark/light switch + artist unlock popup
 (function() {
   var root = document.documentElement;
-  var artistThemes = ['albers', 'vincent', 'warhol'];
+  var artistThemes = ['albers', 'vincent', 'warhol', 'matisse', 'atelier'];
   var stored = localStorage.getItem('theme') || 'light';
   root.setAttribute('data-theme', stored);
 
