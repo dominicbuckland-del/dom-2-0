@@ -13,8 +13,9 @@ python3 -m http.server 8765
 ```
 
 ## Live URLs
-- Production: https://dom-2-0.vercel.app
-- GitHub: https://github.com/dominicbuckland-del/dom-portfolio
+- Production: https://dom-2-0-dominicbuckland-dels-projects.vercel.app
+- GitHub: https://github.com/dominicbuckland-del/dom-2-0
+- Note: `dom-2-0.vercel.app` is taken by another team — cannot claim that subdomain
 
 ## Architecture (current)
 Single static `index.html`. No framework, no build step. CSS custom properties drive a full theme system via `data-theme` on `:root`.
